@@ -1,11 +1,89 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Geist:wght@300;400;500;600&display=swap');
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Geist', sans-serif;
+    --font-display: 'Fraunces', serif;
+
+    --color-brand-50:  #fdf8f0;
+    --color-brand-100: #faefd9;
+    --color-brand-200: #f3d9a8;
+    --color-brand-300: #eabd6e;
+    --color-brand-400: #e0a040;
+    --color-brand-500: #d4892a;
+    --color-brand-600: #bc6e1f;
+    --color-brand-700: #9c541c;
+    --color-brand-800: #7e431e;
+    --color-brand-900: #68381c;
+
+    --animate-fade-in:     fadeIn 0.4s ease forwards;
+    --animate-slide-up:    slideUp 0.4s ease forwards;
+    --animate-slide-right: slideRight 0.3s ease forwards;
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideRight {
+        from { opacity: 0; transform: translateX(-16px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+}
+
+@layer base {
+    html { -webkit-font-smoothing: antialiased; }
+    body { background-color: var(--color-stone-50); color: var(--color-stone-800); }
+}
+
+@layer components {
+    .btn-primary {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--color-stone-900); color: white;
+        font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em;
+        transition: background-color 0.2s; cursor: pointer;
+    }
+    .btn-primary:hover { background-color: var(--color-brand-600); }
+
+    .btn-secondary {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--color-stone-300); color: var(--color-stone-700);
+        font-size: 0.875rem; font-weight: 500;
+        transition: border-color 0.2s, color 0.2s; cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--color-stone-900); color: var(--color-stone-900); }
+
+    .btn-ghost {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        color: var(--color-stone-600); font-size: 0.875rem;
+        transition: color 0.2s; cursor: pointer;
+    }
+    .btn-ghost:hover { color: var(--color-stone-900); }
+
+    .input-base {
+        width: 100%;
+        border: 1px solid var(--color-stone-200); background: white;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem; color: var(--color-stone-800);
+        transition: border-color 0.2s;
+    }
+    .input-base::placeholder { color: var(--color-stone-400); }
+    .input-base:focus { outline: none; border-color: var(--color-stone-900); }
+
+    .badge {
+        display: inline-flex; align-items: center;
+        padding: 0.125rem 0.625rem;
+        font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em;
+    }
 }

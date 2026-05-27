@@ -10,7 +10,21 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+    ->withMiddleware(function (Middleware $middleware) {
+    $middleware->web(append: [
+        \App\Http\Middleware\HandleInertiaRequests::class,
+    ]);
+    })
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->web(append: [
+            \App\Http\Middleware\HandleInertiaRequests::class,
+            \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
+        ]);
+        // Alias para usar 'admin' en las rutas
+    $middleware->alias([
+        'admin' => \App\Http\Middleware\EnsureIsAdmin::class,
+    ]);
+
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
