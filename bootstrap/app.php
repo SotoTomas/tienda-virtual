@@ -10,6 +10,17 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+    ->withRouting(
+    web: __DIR__.'/../routes/web.php',
+    then: function () {
+        Route::middleware('web')
+            ->group(base_path('routes/admin.php'));
+
+        // Sin CSRF para webhooks externos
+        Route::middleware('api')
+            ->group(base_path('routes/webhooks.php'));
+    }
+)
     ->withMiddleware(function (Middleware $middleware) {
     $middleware->web(append: [
         \App\Http\Middleware\HandleInertiaRequests::class,
@@ -27,6 +38,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
         //
     })
+    
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

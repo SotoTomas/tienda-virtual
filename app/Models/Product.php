@@ -97,6 +97,14 @@ class Product extends Model
         return $query->where('is_featured', true);
     }
 
+    public function scopeSearch($query, string $term)
+    {
+    return $query->where(function ($q) use ($term) {
+        $q->where('name', 'like', "%{$term}%")
+          ->orWhere('sku', 'like', "%{$term}%")
+          ->orWhere('short_description', 'like', "%{$term}%");
+        });
+    }
     public function scopeInStock($query)
     {
         return $query->where(function ($q) {
