@@ -1,58 +1,166 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Tienda Virtual
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicación de comercio electrónico (e-commerce) construida con **Laravel 13** y **Vue 3** mediante **Inertia.js**, con pasarela de pagos integrada de **MercadoPago**. Incluye una tienda pública completa y un panel de administración para gestionar el catálogo, pedidos, cupones y reseñas.
 
-## About Laravel
+## Características
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Tienda pública
+- Página de inicio con productos destacados.
+- Catálogo de productos con detalle, imágenes y variantes.
+- Navegación por categorías y buscador.
+- Carrito de compras funcional para invitados y usuarios autenticados.
+- Aplicación de cupones de descuento.
+- Lista de deseos (wishlist).
+- Reseñas y calificaciones de productos.
+- Gestión de direcciones de envío.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Checkout y pedidos
+- Proceso de checkout con pago vía **MercadoPago**.
+- Confirmación de pago mediante webhook.
+- Historial de pedidos del cliente ("Mis pedidos").
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Panel de administración (`/admin`)
+- Dashboard con métricas.
+- Gestión de productos y variantes (crear, editar, eliminar).
+- Gestión de categorías.
+- Gestión de pedidos y actualización de estado.
+- Gestión de cupones de descuento.
+- Moderación de reseñas (aprobar / eliminar).
 
-## Learning Laravel
+## Stack tecnológico
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Capa        | Tecnología                                   |
+|-------------|----------------------------------------------|
+| Backend     | Laravel 13 (PHP 8.3+)                         |
+| Frontend    | Vue 3 + Inertia.js                           |
+| Estilos     | Tailwind CSS 4                               |
+| Build       | Vite 8                                       |
+| Autenticación | Laravel Breeze + Sanctum                   |
+| Estado (cliente) | Pinia                                   |
+| Pagos       | MercadoPago (`mercadopago/dx-php`)           |
+| Rutas JS    | Ziggy                                        |
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Requisitos previos
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- PHP >= 8.3
+- Composer
+- Node.js y npm
+- Una base de datos (MySQL/MariaDB, o SQLite)
+- Credenciales de MercadoPago (para el checkout)
 
-## Agentic Development
+## Instalación
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+1. Clona el repositorio e instala las dependencias:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone <url-del-repositorio>
+cd tienda-virtual-main
+composer install
+npm install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+2. Copia el archivo de entorno y genera la clave de la aplicación:
 
-## Contributing
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Configura la base de datos y las credenciales de MercadoPago en el archivo `.env` (ver sección [Variables de entorno](#variables-de-entorno)).
 
-## Code of Conduct
+4. Ejecuta las migraciones y los seeders (carga datos de ejemplo: usuarios, categorías, productos y cupones):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan migrate --seed
+```
 
-## Security Vulnerabilities
+5. Compila los assets del frontend:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+npm run build
+```
 
-## License
+> Alternativamente, puedes ejecutar el script de instalación completo con `composer setup`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Variables de entorno
+
+Además de la configuración estándar de Laravel, esta aplicación utiliza las siguientes variables para MercadoPago:
+
+```env
+MP_ACCESS_TOKEN=tu-access-token
+MP_PUBLIC_KEY=tu-public-key
+MP_WEBHOOK_SECRET=tu-webhook-secret
+MP_SANDBOX=true
+```
+
+Configuración de la base de datos (ejemplo MySQL):
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tienda_virtual
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+## Ejecución en desarrollo
+
+Para levantar el servidor, la cola, los logs y Vite simultáneamente:
+
+```bash
+composer dev
+```
+
+O bien de forma manual en terminales separadas:
+
+```bash
+php artisan serve
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:8000`.
+
+## Usuarios de prueba
+
+Los seeders crean dos cuentas de ejemplo:
+
+| Rol           | Email               | Contraseña |
+|---------------|---------------------|------------|
+| Administrador | `admin@tienda.com`  | `password` |
+| Cliente       | `cliente@tienda.com`| `password` |
+
+El panel de administración es accesible en `/admin` con la cuenta de administrador.
+
+## Pruebas
+
+```bash
+php artisan test
+```
+
+## Estructura del proyecto
+
+```
+app/
+├── Http/Controllers/
+│   ├── Store/         # Controladores de la tienda pública (Home, Product, Category, Search)
+│   ├── Admin/         # Controladores del panel de administración
+│   └── ...            # Cart, Checkout, Order, Wishlist, Review, Address
+├── Models/            # Modelos Eloquent (Product, Order, Cart, Coupon, etc.)
+resources/js/
+├── Pages/             # Vistas Vue organizadas por sección (Store, Admin, Account, Auth...)
+├── Layouts/           # Layouts (StoreLayout, AdminLayout, AuthenticatedLayout...)
+└── Components/        # Componentes reutilizables
+routes/
+├── web.php            # Rutas de la tienda y del área de cliente
+├── admin.php          # Rutas del panel de administración
+├── auth.php           # Rutas de autenticación (Breeze)
+└── webhooks.php       # Webhook de MercadoPago
+database/
+├── migrations/        # Esquema de la base de datos
+└── seeders/           # Datos de ejemplo
+```
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia [MIT](https://opensource.org/licenses/MIT).
