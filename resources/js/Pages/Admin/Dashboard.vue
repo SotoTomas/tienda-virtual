@@ -21,8 +21,6 @@ const statusLabel = {
 
 <template>
     <div>
-        <template #breadcrumb>Dashboard</template>
-
         <div class="mb-8">
             <h1 class="font-display text-3xl text-stone-900">Dashboard</h1>
             <p class="text-stone-500 text-sm mt-1">Resumen general de la tienda</p>
@@ -63,7 +61,7 @@ const statusLabel = {
                             <th class="text-left text-xs text-stone-400 font-medium px-6 py-3">Total</th>
                             <th class="text-left text-xs text-stone-400 font-medium px-6 py-3">Estado</th>
                             <th class="text-left text-xs text-stone-400 font-medium px-6 py-3">Fecha</th>
-                            <th class="px-6 py-3"/>
+                            <th class="px-6 py-3"></th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-stone-50">

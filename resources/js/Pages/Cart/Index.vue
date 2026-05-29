@@ -46,7 +46,7 @@ function removeCoupon() {
                     <!-- Imagen -->
                     <div class="w-24 h-28 bg-stone-100 shrink-0 overflow-hidden">
                         <img v-if="item.product.main_image"
-                            :src="`/storage/${item.product.main_image}`"
+                            :src="`/${item.product.main_image}`"
                             :alt="item.product.name"
                             class="w-full h-full object-cover"
                         />

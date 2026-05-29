@@ -46,6 +46,13 @@ return [
             'throw' => false,
             'report' => false,
         ],
+        'product_images' => [
+            'driver' => 'local',
+            'root'   => public_path('images/products'),
+            'url'    => env('APP_URL').'/images/products',
+            'visibility' => 'public',
+            'throw'  => false,
+        ],
 
         's3' => [
             'driver' => 's3',

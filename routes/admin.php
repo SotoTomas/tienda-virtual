@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\ProductVariantController;
 
 Route::prefix('admin')
     ->name('admin.')
@@ -24,6 +25,11 @@ Route::prefix('admin')
             Route::get('/{product}',   [ProductController::class, 'edit'])->name('edit');
             Route::patch('/{product}', [ProductController::class, 'update'])->name('update');
             Route::delete('/{product}',[ProductController::class, 'destroy'])->name('destroy');
+        });
+        Route::prefix('productos/{product}/variantes')->name('products.variants.')->group(function () {
+        Route::post('/',             [ProductVariantController::class, 'store'])->name('store');
+        Route::patch('/{variant}',   [ProductVariantController::class, 'update'])->name('update');
+        Route::delete('/{variant}',  [ProductVariantController::class, 'destroy'])->name('destroy');
         });
 
         // Categorías

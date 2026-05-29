@@ -59,3 +59,4 @@ const verificationLinkSent = computed(
         </form>
     </GuestLayout>
 </template>
+

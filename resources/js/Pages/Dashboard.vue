@@ -28,3 +28,4 @@ import { Head } from '@inertiajs/vue3';
         </div>
     </AuthenticatedLayout>
 </template>
+

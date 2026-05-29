@@ -32,9 +32,7 @@ class HandleInertiaRequests extends Middleware
 
             // ── Carrito ────────────────────────────────────
             // Se evalúa lazy para no ejecutarse si no se necesita
-            'cart' => fn () => [
-                'count' => $this->getCartCount($request),
-            ],
+            'cart' => fn () => $this->getCartData($request),
 
             // ── Flash messages ─────────────────────────────
             'flash' => [
@@ -61,7 +59,47 @@ class HandleInertiaRequests extends Middleware
                 ]),
         ];
     }
+    private function getCartData(Request $request): array
+{
+    $cart = null;
 
+    if ($request->user()) {
+        $cart = \App\Models\Cart::where('user_id', $request->user()->id)
+            ->with('items.product', 'items.variant')
+            ->first();
+    } else {
+        $cart = \App\Models\Cart::where('session_id', session()->getId())
+            ->with('items.product', 'items.variant')
+            ->first();
+    }
+
+    if (! $cart) {
+        return ['count' => 0, 'items' => [], 'total' => 0, 'item_count' => 0];
+    }
+
+    return [
+        'count'      => $cart->item_count,
+        'item_count' => $cart->item_count,
+        'total'      => $cart->total,
+        'items'      => $cart->items->map(fn ($item) => [
+            'id'         => $item->id,
+            'quantity'   => $item->quantity,
+            'unit_price' => $item->unit_price,
+            'subtotal'   => $item->subtotal,
+            'product'    => [
+                'id'         => $item->product->id,
+                'name'       => $item->product->name,
+                'slug'       => $item->product->slug,
+                'main_image' => $item->product->main_image,
+                'stock'      => $item->product->stock,
+            ],
+            'variant' => $item->variant ? [
+                'id'   => $item->variant->id,
+                'name' => $item->variant->name,
+            ] : null,
+        ])->toArray(),
+    ];
+}
     private function getCartCount(Request $request): int
     {
         // Usuario logueado: busca su carrito en BD

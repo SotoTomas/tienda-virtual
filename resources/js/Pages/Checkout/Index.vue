@@ -289,7 +289,7 @@ const orderTotal = computed(() => props.cart?.total ?? 0)
                         <div v-for="item in cart.items" :key="item.id" class="flex gap-3">
                             <div class="w-12 h-14 bg-stone-200 shrink-0 overflow-hidden">
                                 <img v-if="item.product.main_image"
-                                    :src="`/storage/${item.product.main_image}`"
+                                    :src="`/${item.product.main_image}`"
                                     class="w-full h-full object-cover"
                                 />
                             </div>

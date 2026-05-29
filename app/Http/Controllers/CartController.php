@@ -12,6 +12,7 @@ use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
 use Inertia\Response;
 
+
 class CartController extends Controller
 {
     public function index(): Response

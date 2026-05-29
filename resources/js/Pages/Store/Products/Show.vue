@@ -92,7 +92,7 @@ function addToCart() {
                 <div class="aspect-[4/5] bg-stone-100 overflow-hidden">
                     <img
                         v-if="selectedImage"
-                        :src="`/storage/${selectedImage}`"
+                        :src="`/${selectedImage}`"
                         :alt="product.name"
                         class="w-full h-full object-cover"
                     />
@@ -112,7 +112,7 @@ function addToCart() {
                         class="w-20 h-20 shrink-0 bg-stone-100 overflow-hidden border-2 transition-colors"
                         :class="selectedImage === img.path ? 'border-stone-900' : 'border-transparent'"
                     >
-                        <img :src="`/storage/${img.path}`" :alt="img.alt" class="w-full h-full object-cover"/>
+                        <img :src="`/${img.path}`" :alt="img.alt" class="w-full h-full object-cover"/>
                     </button>
                 </div>
             </div>

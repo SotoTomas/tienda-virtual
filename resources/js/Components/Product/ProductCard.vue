@@ -28,7 +28,7 @@ function addToCart() {
             <Link :href="route('products.show', product.slug)">
                 <img
                     v-if="product.main_image"
-                    :src="`/storage/${product.main_image}`"
+                    :src="`/${product.main_image}`"
                     :alt="product.name"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

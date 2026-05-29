@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Services\ImageService;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
@@ -57,30 +58,45 @@ class ProductController extends Controller
         ]);
     }
 
-    public function store(Request $request): RedirectResponse
-    {
-        $validated = $request->validate([
-            'name'              => 'required|string|max:255',
-            'slug'              => 'required|string|unique:products,slug',
-            'category_id'       => 'required|exists:categories,id',
-            'short_description' => 'nullable|string',
-            'description'       => 'nullable|string',
-            'price'             => 'required|numeric|min:0',
-            'compare_price'     => 'nullable|numeric|min:0',
-            'sku'               => 'nullable|string|unique:products,sku',
-            'stock'             => 'required|integer|min:0',
-            'manage_stock'      => 'boolean',
-            'is_active'         => 'boolean',
-            'is_featured'       => 'boolean',
-            'weight'            => 'nullable|numeric|min:0',
-        ]);
+   public function store(Request $request): RedirectResponse
+{
+    $validated = $request->validate([
+        'name'              => 'required|string|max:255',
+        'slug'              => 'required|string|unique:products,slug',
+        'category_id'       => 'required|exists:categories,id',
+        'short_description' => 'nullable|string',
+        'description'       => 'nullable|string',
+        'price'             => 'required|numeric|min:0',
+        'compare_price'     => 'nullable|numeric|min:0',
+        'sku'               => 'nullable|string|unique:products,sku',
+        'stock'             => 'required|integer|min:0',
+        'manage_stock'      => 'boolean',
+        'is_active'         => 'boolean',
+        'is_featured'       => 'boolean',
+        'weight'            => 'nullable|numeric|min:0',
+        'main_image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'gallery.*'         => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+    ]);
 
-        Product::create($validated);
-
-        return redirect()
-            ->route('admin.products.index')
-            ->with('success', 'Producto creado correctamente.');
+    // Upload imagen principal
+    if ($request->hasFile('main_image')) {
+        $validated['main_image'] = app(ImageService::class)->upload($request->file('main_image'));
     }
+
+    // Upload galería
+    $gallery = [];
+    if ($request->hasFile('gallery')) {
+        foreach ($request->file('gallery') as $file) {
+            $gallery[] = app(ImageService::class)->upload($file);
+        }
+    }
+    if ($gallery) $validated['gallery'] = $gallery;
+
+    Product::create($validated);
+
+    return redirect()->route('admin.products.index')
+        ->with('success', 'Producto creado correctamente.');
+}
 
     public function edit(Product $product): Response
     {
@@ -116,27 +132,55 @@ class ProductController extends Controller
     }
 
     public function update(Request $request, Product $product): RedirectResponse
-    {
-        $validated = $request->validate([
-            'name'              => 'sometimes|string|max:255',
-            'slug'              => 'sometimes|string|unique:products,slug,' . $product->id,
-            'category_id'       => 'sometimes|exists:categories,id',
-            'short_description' => 'nullable|string',
-            'description'       => 'nullable|string',
-            'price'             => 'sometimes|numeric|min:0',
-            'compare_price'     => 'nullable|numeric|min:0',
-            'sku'               => 'nullable|string|unique:products,sku,' . $product->id,
-            'stock'             => 'sometimes|integer|min:0',
-            'manage_stock'      => 'boolean',
-            'is_active'         => 'boolean',
-            'is_featured'       => 'boolean',
-            'weight'            => 'nullable|numeric|min:0',
-        ]);
+{
+    $validated = $request->validate([
+        'name'              => 'sometimes|string|max:255',
+        'slug'              => 'sometimes|string|unique:products,slug,' . $product->id,
+        'category_id'       => 'sometimes|exists:categories,id',
+        'short_description' => 'nullable|string',
+        'description'       => 'nullable|string',
+        'price'             => 'sometimes|numeric|min:0',
+        'compare_price'     => 'nullable|numeric|min:0',
+        'sku'               => 'nullable|string|unique:products,sku,' . $product->id,
+        'stock'             => 'sometimes|integer|min:0',
+        'manage_stock'      => 'boolean',
+        'is_active'         => 'boolean',
+        'is_featured'       => 'boolean',
+        'weight'            => 'nullable|numeric|min:0',
+        'main_image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'gallery.*'         => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+    ]);
 
-        $product->update($validated);
+    $imageService = app(ImageService::class);
 
-        return back()->with('success', 'Producto actualizado.');
+    // Reemplazar imagen principal
+    if ($request->hasFile('main_image')) {
+        $imageService->delete($product->main_image);
+        $validated['main_image'] = $imageService->upload($request->file('main_image'));
     }
+
+    // Agregar a galería existente
+    if ($request->hasFile('gallery')) {
+        $existing = $product->gallery ?? [];
+        foreach ($request->file('gallery') as $file) {
+            $existing[] = $imageService->upload($file);
+        }
+        $validated['gallery'] = $existing;
+    }
+
+    // Eliminar imagen de galería específica
+    if ($request->filled('delete_gallery_image')) {
+        $imageService->delete($request->delete_gallery_image);
+        $validated['gallery'] = collect($product->gallery ?? [])
+            ->filter(fn ($img) => $img !== $request->delete_gallery_image)
+            ->values()
+            ->toArray();
+    }
+
+    $product->update($validated);
+
+    return back()->with('success', 'Producto actualizado.');
+}
 
     public function destroy(Product $product): RedirectResponse
     {

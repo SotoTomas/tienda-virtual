@@ -1,8 +1,25 @@
 <script setup>
 import AdminLayout from '@/Layouts/AdminLayout.vue'
 import { useForm, Link } from '@inertiajs/vue3'
+import { ref } from 'vue'
 
 defineOptions({ layout: AdminLayout })
+
+const mainImagePreview   = ref(null)
+const galleryPreviews    = ref([])
+
+function onMainImageChange(e) {
+    const file = e.target.files[0]
+    if (!file) return
+    form.main_image = file
+    mainImagePreview.value = URL.createObjectURL(file)
+}
+
+function onGalleryChange(e) {
+    const files = Array.from(e.target.files)
+    form.gallery = files
+    galleryPreviews.value = files.map(f => URL.createObjectURL(f))
+}
 
 const props = defineProps({
     categories: Array,
@@ -22,6 +39,8 @@ const form = useForm({
     is_active:         true,
     is_featured:       false,
     weight:            '',
+    main_image:       null,
+    gallery:          [],
 })
 
 // Auto-genera el slug desde el nombre
@@ -36,7 +55,9 @@ function generateSlug() {
 }
 
 function submit() {
-    form.post(route('admin.products.store'))
+    form.post(route('admin.products.store'),{
+        forceFormData: true,
+    })
 }
 </script>
 
@@ -134,6 +155,65 @@ function submit() {
                     <div class="flex items-center gap-3">
                         <input v-model="form.manage_stock" type="checkbox" id="manage_stock" class="w-4 h-4 accent-stone-900"/>
                         <label for="manage_stock" class="text-sm text-stone-600">Controlar stock</label>
+                    </div>
+                </div>
+                <!-- Imágenes-->
+                <div class="bg-white border border-stone-100 rounded p-6 space-y-5">
+                    <h2 class="font-medium text-stone-800">Imágenes</h2>
+
+                    <!-- Imagen principal -->
+                    <div>
+                        <label class="block text-xs text-stone-500 mb-1.5">Imagen principal</label>
+                        <div class="flex items-start gap-4">
+                            <div v-if="mainImagePreview"
+                                class="w-24 h-24 bg-stone-100 overflow-hidden shrink-0">
+                                <img :src="mainImagePreview" class="w-full h-full object-cover"/>
+                            </div>
+                            <div v-else class="w-24 h-24 bg-stone-100 flex items-center justify-center shrink-0 text-stone-300">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <input
+                                    type="file"
+                                    accept="image/jpeg,image/png,image/webp"
+                                    @change="onMainImageChange"
+                                    class="block w-full text-sm text-stone-500
+                                        file:mr-4 file:py-2 file:px-4 file:border-0
+                                        file:text-xs file:font-medium file:tracking-wide
+                                        file:bg-stone-900 file:text-white
+                                        hover:file:bg-brand-600 cursor-pointer"
+                                />
+                                <p class="text-xs text-stone-400 mt-1.5">JPG, PNG o WebP. Máximo 2MB.</p>
+                                <p v-if="form.errors.main_image" class="text-xs text-red-500 mt-1">{{ form.errors.main_image }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería -->
+                    <div>
+                        <label class="block text-xs text-stone-500 mb-1.5">Galería (múltiples imágenes)</label>
+                        <input
+                            type="file"
+                            accept="image/jpeg,image/png,image/webp"
+                            multiple
+                            @change="onGalleryChange"
+                            class="block w-full text-sm text-stone-500
+                                file:mr-4 file:py-2 file:px-4 file:border-0
+                                file:text-xs file:font-medium file:tracking-wide
+                                file:bg-stone-100 file:text-stone-700
+                                hover:file:bg-stone-200 cursor-pointer"
+                        />
+                        <p class="text-xs text-stone-400 mt-1.5">Podés seleccionar múltiples archivos.</p>
+
+                        <!-- Previews galería -->
+                        <div v-if="galleryPreviews.length" class="flex flex-wrap gap-3 mt-3">
+                            <div v-for="(src, i) in galleryPreviews" :key="i"
+                                class="w-20 h-20 bg-stone-100 overflow-hidden">
+                                <img :src="src" class="w-full h-full object-cover"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
