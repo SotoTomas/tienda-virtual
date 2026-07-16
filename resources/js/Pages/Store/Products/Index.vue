@@ -1,40 +1,79 @@
 <script setup>
-import StoreLayout from '@/Layouts/StoreLayout.vue'
+import { ref, watch, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import ProductCard from '@/Components/Product/ProductCard.vue'
-import { Link, router } from '@inertiajs/vue3'
-import { ref, watch } from 'vue'
+import { useCatalogStore } from '@/stores/catalog'
 
-defineOptions({ layout: StoreLayout })
+const route = useRoute()
+const router = useRouter()
+const catalog = useCatalogStore()
 
-const props = defineProps({
-    products:   Object,
-    filters:    Object,
-    categories: Array,
-})
+const products = ref({ data: [], total: 0, last_page: 1 })
+const categories = ref([])
+const filters = ref({})
 
-// Filtros locales sincronizados con los props
 const localFilters = ref({
-    categoria:  props.filters?.categoria  ?? '',
-    precio_min: props.filters?.precio_min ?? '',
-    precio_max: props.filters?.precio_max ?? '',
-    buscar:     props.filters?.buscar     ?? '',
-    orden:      props.filters?.orden      ?? 'recientes',
+    categoria: '',
+    precio_min: '',
+    precio_max: '',
+    buscar: '',
+    orden: 'recientes',
+    destacados: '',
 })
+
+async function loadProducts() {
+    const query = route.query
+    filters.value = { ...query }
+    localFilters.value = {
+        categoria: query.categoria ?? '',
+        precio_min: query.precio_min ?? '',
+        precio_max: query.precio_max ?? '',
+        buscar: query.buscar ?? '',
+        orden: query.orden ?? 'recientes',
+        destacados: query.destacados ?? '',
+    }
+
+    products.value = await catalog.getProducts(query, query.page ?? 1)
+}
 
 function applyFilters() {
-    router.get(route('products.index'), localFilters.value, {
-        preserveScroll: true,
-        replace: true,
+    const query = { ...localFilters.value }
+    Object.keys(query).forEach((key) => {
+        if (!query[key]) delete query[key]
     })
+    router.push({ name: 'products.index', query })
 }
 
 function clearFilters() {
-    localFilters.value = { categoria: '', precio_min: '', precio_max: '', buscar: '', orden: 'recientes' }
+    localFilters.value = {
+        categoria: '',
+        precio_min: '',
+        precio_max: '',
+        buscar: '',
+        orden: 'recientes',
+        destacados: '',
+    }
     applyFilters()
 }
 
-// Aplica automáticamente cuando cambia el orden
-watch(() => localFilters.value.orden, applyFilters)
+function goToPage(page) {
+    router.push({ name: 'products.index', query: { ...route.query, page } })
+}
+
+watch(() => route.query, loadProducts, { deep: true })
+
+watch(
+    () => localFilters.value.orden,
+    (val, oldVal) => {
+        if (oldVal !== undefined) applyFilters()
+    },
+)
+
+onMounted(async () => {
+    await catalog.ensureLoaded()
+    categories.value = catalog.getFilterCategories()
+    await loadProducts()
+})
 </script>
 
 <template>
@@ -117,12 +156,10 @@ watch(() => localFilters.value.orden, applyFilters)
 
                 <!-- Toolbar -->
                 <div class="flex items-center justify-between mb-6">
-                    <!-- Filtros mobile -->
                     <span class="text-sm text-stone-500 lg:hidden">
                         {{ products.total }} resultados
                     </span>
 
-                    <!-- Ordenamiento -->
                     <div class="flex items-center gap-3 ml-auto">
                         <label class="text-xs text-stone-500 hidden sm:block">Ordenar por</label>
                         <select
@@ -160,19 +197,17 @@ watch(() => localFilters.value.orden, applyFilters)
 
                 <!-- Paginación -->
                 <div v-if="products.last_page > 1" class="mt-12 flex items-center justify-center gap-2">
-                    <Link
-                        v-for="link in products.links"
-                        :key="link.label"
-                        :href="link.url ?? '#'"
-                        v-html="link.label"
+                    <button
+                        v-for="page in products.last_page"
+                        :key="page"
+                        @click="goToPage(page)"
                         class="px-3 py-2 text-sm transition-colors"
-                        :class="[
-                            link.active
-                                ? 'bg-stone-900 text-white'
-                                : 'text-stone-500 hover:text-stone-900',
-                            !link.url ? 'opacity-30 pointer-events-none' : ''
-                        ]"
-                    />
+                        :class="page === products.current_page
+                            ? 'bg-stone-900 text-white'
+                            : 'text-stone-500 hover:text-stone-900'"
+                    >
+                        {{ page }}
+                    </button>
                 </div>
             </div>
         </div>

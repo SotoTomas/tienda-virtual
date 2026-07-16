@@ -1,23 +1,37 @@
 <script setup>
-import StoreLayout from '@/Layouts/StoreLayout.vue'
+import { ref, watch, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import ProductCard from '@/Components/Product/ProductCard.vue'
-import { ref, watch } from 'vue'
-import { router } from '@inertiajs/vue3'
+import { useCatalogStore } from '@/stores/catalog'
 
-defineOptions({ layout: StoreLayout })
+const route = useRoute()
+const router = useRouter()
+const catalog = useCatalogStore()
 
-const props = defineProps({
-    query:    String,
-    products: Object,
-})
+const query = ref('')
+const products = ref({ data: [], total: 0, last_page: 1 })
+const localQuery = ref('')
 
-const localQuery = ref(props.query ?? '')
+let debounceTimer = null
 
-watch(localQuery, (val) => {
-    if (val.length >= 2 || val.length === 0) {
-        router.get(route('search'), { q: val }, { preserveScroll: true, replace: true })
-    }
-})
+async function loadResults() {
+    query.value = route.query.q ?? ''
+    localQuery.value = query.value
+    products.value = await catalog.searchProducts(query.value, route.query.page ?? 1)
+}
+
+function onQueryInput() {
+    clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => {
+        if (localQuery.value.length >= 2 || localQuery.value.length === 0) {
+            router.push({ name: 'search', query: localQuery.value ? { q: localQuery.value } : {} })
+        }
+    }, 300)
+}
+
+watch(() => route.query, loadResults, { deep: true })
+
+onMounted(loadResults)
 </script>
 
 <template>
@@ -31,6 +45,7 @@ watch(localQuery, (val) => {
                     placeholder="¿Qué estás buscando?"
                     class="input-base pr-12 text-base"
                     autofocus
+                    @input="onQueryInput"
                 />
                 <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +54,6 @@ watch(localQuery, (val) => {
             </div>
         </div>
 
-        <!-- Resultados -->
         <div v-if="query?.length >= 2">
             <p class="text-sm text-stone-500 mb-8">
                 <span v-if="products.total > 0">

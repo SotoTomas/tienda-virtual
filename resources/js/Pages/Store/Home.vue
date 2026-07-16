@@ -1,14 +1,21 @@
 <script setup>
-import StoreLayout from '@/Layouts/StoreLayout.vue'
+import { ref, onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
 import ProductCard from '@/Components/Product/ProductCard.vue'
-import { Link } from '@inertiajs/vue3'
+import { useCatalogStore } from '@/stores/catalog'
 
-defineOptions({ layout: StoreLayout })
+const catalog = useCatalogStore()
 
-defineProps({
-    featuredProducts: Array,
-    newArrivals:      Array,
-    topCategories:    Array,
+const featuredProducts = ref([])
+const newArrivals = ref([])
+const topCategories = ref([])
+
+onMounted(async () => {
+    ;[featuredProducts.value, newArrivals.value, topCategories.value] = await Promise.all([
+        catalog.getFeaturedProducts(),
+        catalog.getNewArrivals(),
+        catalog.getTopCategories(),
+    ])
 })
 </script>
 
@@ -29,12 +36,15 @@ defineProps({
                         Descubrí las últimas tendencias en moda y accesorios. Calidad premium, precios accesibles.
                     </p>
                     <div class="mt-10 flex flex-wrap gap-4">
-                        <Link :href="route('products.index')" class="btn-primary px-8 py-4 text-sm tracking-widest uppercase">
+                        <RouterLink to="/productos" class="btn-primary px-8 py-4 text-sm tracking-widest uppercase">
                             Ver colección
-                        </Link>
-                        <Link :href="route('products.index', { destacados: true })" class="btn-secondary border-stone-600 text-stone-300 hover:border-white hover:text-white px-8 py-4 text-sm tracking-widest uppercase">
+                        </RouterLink>
+                        <RouterLink
+                            :to="{ path: '/productos', query: { destacados: 'true' } }"
+                            class="btn-secondary border-stone-600 text-stone-300 hover:border-white hover:text-white px-8 py-4 text-sm tracking-widest uppercase"
+                        >
                             Lo más vendido
-                        </Link>
+                        </RouterLink>
                     </div>
                 </div>
             </div>
@@ -50,10 +60,10 @@ defineProps({
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <Link
+                <RouterLink
                     v-for="(cat, i) in topCategories"
                     :key="cat.id"
-                    :href="route('categories.show', cat.slug)"
+                    :to="`/categoria/${cat.slug}`"
                     class="group relative overflow-hidden bg-stone-100 flex items-end p-6"
                     :class="i === 0 ? 'md:col-span-2 aspect-[2/1]' : 'aspect-square'"
                 >
@@ -62,7 +72,7 @@ defineProps({
                         <h3 class="font-display text-xl lg:text-2xl text-white">{{ cat.name }}</h3>
                         <p class="text-stone-300 text-xs mt-1">{{ cat.products_count }} productos</p>
                     </div>
-                </Link>
+                </RouterLink>
             </div>
         </section>
 
@@ -73,13 +83,15 @@ defineProps({
                     <p class="text-brand-500 text-xs tracking-[0.3em] uppercase mb-2">Selección</p>
                     <h2 class="font-display text-3xl lg:text-4xl text-stone-900">Destacados</h2>
                 </div>
-                <Link :href="route('products.index', { destacados: true })"
-                    class="hidden sm:flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors">
+                <RouterLink
+                    :to="{ path: '/productos', query: { destacados: 'true' } }"
+                    class="hidden sm:flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors"
+                >
                     Ver todos
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
                     </svg>
-                </Link>
+                </RouterLink>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10">
@@ -117,13 +129,15 @@ defineProps({
                     <p class="text-brand-500 text-xs tracking-[0.3em] uppercase mb-2">Recién llegado</p>
                     <h2 class="font-display text-3xl lg:text-4xl text-stone-900">Nuevos ingresos</h2>
                 </div>
-                <Link :href="route('products.index')"
-                    class="hidden sm:flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors">
+                <RouterLink
+                    to="/productos"
+                    class="hidden sm:flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors"
+                >
                     Ver catálogo
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
                     </svg>
-                </Link>
+                </RouterLink>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10">
                 <ProductCard

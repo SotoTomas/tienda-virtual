@@ -1,0 +1,16 @@
+[
+  {
+    "code": "BIENVENIDA10",
+    "type": "percentage",
+    "value": 10,
+    "min_purchase": 15000,
+    "description": "10% de descuento en compras mayores a $15.000"
+  },
+  {
+    "code": "ENVIOGRATIS",
+    "type": "fixed",
+    "value": 5000,
+    "min_purchase": 50000,
+    "description": "$5.000 de descuento (equivalente a envío gratis)"
+  }
+]

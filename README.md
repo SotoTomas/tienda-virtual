@@ -104,7 +104,69 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## Ejecución en desarrollo
+## Ejecución sin base de datos (modo demo)
+
+La tienda pública puede ejecutarse como **SPA independiente** con Vue Router y datos estáticos en JSON, sin PHP, Laravel ni base de datos.
+
+```bash
+cd tienda-virtual
+npm install
+npm run dev
+```
+
+Abrí `http://localhost:5173` en el navegador.
+
+### Datos de ejemplo
+
+Los archivos JSON están en `public/data/`:
+
+| Archivo           | Contenido                          |
+|-------------------|------------------------------------|
+| `categories.json` | Categorías y subcategorías         |
+| `products.json`   | Productos, variantes y reseñas     |
+| `coupons.json`    | Cupones de descuento               |
+
+Podés editar estos archivos para cambiar el catálogo sin tocar código.
+
+### Rutas disponibles (Vue Router)
+
+| Ruta                    | Página              |
+|-------------------------|---------------------|
+| `/`                     | Inicio              |
+| `/productos`            | Catálogo            |
+| `/productos/:slug`      | Detalle de producto |
+| `/categoria/:slug`      | Categoría           |
+| `/buscar?q=...`         | Búsqueda            |
+| `/carrito`              | Carrito             |
+
+El carrito se guarda en `localStorage`. Cupones de prueba: `BIENVENIDA10`, `ENVIOGRATIS`.
+
+### Build para producción
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Ejecución con Laravel (backend completo)
+
+Para checkout, autenticación, admin y MercadoPago, seguí usando el backend Laravel:
+
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+composer dev
+```
+
+La aplicación estará disponible en `http://localhost:8000`.
+
+> **Nota:** El frontend de la tienda ahora usa Vue Router y JSON. Las rutas Laravel en `routes/web.php` ya no sirven la tienda pública; el modo recomendado para ver el catálogo es `npm run dev`.
+
+## Ejecución en desarrollo (legacy)
 
 Para levantar el servidor, la cola, los logs y Vite simultáneamente:
 

@@ -1,8 +1,8 @@
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    open:       Boolean,
+defineProps({
+    open: Boolean,
     categories: Array,
 })
 const emit = defineEmits(['close'])
@@ -10,13 +10,11 @@ const emit = defineEmits(['close'])
 
 <template>
     <Teleport to="body">
-        <!-- Overlay -->
         <Transition name="overlay">
             <div v-if="open" @click="emit('close')"
                 class="fixed inset-0 z-50 bg-stone-900/50 backdrop-blur-sm" />
         </Transition>
 
-        <!-- Panel -->
         <Transition name="drawer">
             <div v-if="open"
                 class="fixed inset-y-0 left-0 z-50 w-80 bg-white flex flex-col shadow-xl">
@@ -32,29 +30,29 @@ const emit = defineEmits(['close'])
                 </div>
                 <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
                     <div v-for="cat in categories" :key="cat.id">
-                        <Link
-                            :href="route('categories.show', cat.slug)"
+                        <RouterLink
+                            :to="`/categoria/${cat.slug}`"
                             @click="emit('close')"
                             class="block py-3 text-base font-medium text-stone-800 border-b border-stone-100"
                         >
                             {{ cat.name }}
-                        </Link>
+                        </RouterLink>
                         <div v-if="cat.children?.length" class="pl-4 mt-1 space-y-1">
-                            <Link
+                            <RouterLink
                                 v-for="child in cat.children"
                                 :key="child.id"
-                                :href="route('categories.show', child.slug)"
+                                :to="`/categoria/${child.slug}`"
                                 @click="emit('close')"
                                 class="block py-2 text-sm text-stone-500 hover:text-stone-900 transition-colors"
                             >
                                 {{ child.name }}
-                            </Link>
+                            </RouterLink>
                         </div>
                     </div>
-                    <Link :href="route('products.index')" @click="emit('close')"
+                    <RouterLink to="/productos" @click="emit('close')"
                         class="block py-3 text-base font-medium text-stone-800">
                         Todo
-                    </Link>
+                    </RouterLink>
                 </nav>
             </div>
         </Transition>

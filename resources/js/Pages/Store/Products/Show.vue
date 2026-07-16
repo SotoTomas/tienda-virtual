@@ -1,98 +1,108 @@
 <script setup>
-import StoreLayout from '@/Layouts/StoreLayout.vue'
+import { ref, computed, watch, onMounted } from 'vue'
+import { useRoute, RouterLink } from 'vue-router'
 import ProductCard from '@/Components/Product/ProductCard.vue'
-import { Link, router } from '@inertiajs/vue3'
-import { ref, computed } from 'vue'
+import { useCatalogStore } from '@/stores/catalog'
+import { useCartStore } from '@/stores/cart'
+import { productImage } from '@/utils/catalog'
 
-defineOptions({ layout: StoreLayout })
+const route = useRoute()
+const catalog = useCatalogStore()
+const cart = useCartStore()
 
-const props = defineProps({
-    product: Object,
-    related: Array,
-})
-
-const selectedVariant  = ref(null)
-const selectedImage    = ref(props.product.main_image)
-const quantity         = ref(1)
-const adding           = ref(false)
-const activeTab        = ref('description')
+const product = ref(null)
+const related = ref([])
+const selectedVariant = ref(null)
+const selectedImage = ref(null)
+const quantity = ref(1)
+const adding = ref(false)
+const activeTab = ref('description')
 
 const effectivePrice = computed(() => {
     if (selectedVariant.value?.price) return selectedVariant.value.price
-    return props.product.price
+    return product.value?.price ?? 0
 })
 
 const isInStock = computed(() => {
     if (selectedVariant.value) return selectedVariant.value.in_stock
-    return props.product.is_in_stock
+    return product.value?.is_in_stock ?? false
 })
 
-// Agrupa las opciones de variantes por tipo (color, talle, etc.)
 const variantOptions = computed(() => {
     const options = {}
-    props.product.variants?.forEach(v => {
+    product.value?.variants?.forEach((v) => {
         Object.entries(v.options).forEach(([key, value]) => {
             if (!options[key]) options[key] = new Set()
             options[key].add(value)
         })
     })
-    return Object.fromEntries(
-        Object.entries(options).map(([k, v]) => [k, [...v]])
-    )
+    return Object.fromEntries(Object.entries(options).map(([k, v]) => [k, [...v]]))
 })
 
 const selectedOptions = ref({})
 
 function selectOption(key, value) {
     selectedOptions.value = { ...selectedOptions.value, [key]: value }
-    // Busca el variante que coincida con todas las opciones seleccionadas
-    selectedVariant.value = props.product.variants?.find(v =>
-        Object.entries(selectedOptions.value).every(([k, val]) => v.options[k] === val)
-    ) ?? null
+    selectedVariant.value =
+        product.value?.variants?.find((v) =>
+            Object.entries(selectedOptions.value).every(([k, val]) => v.options[k] === val),
+        ) ?? null
 }
 
 function isOptionSelected(key, value) {
     return selectedOptions.value[key] === value
 }
 
-function addToCart() {
-    if (!isInStock.value) return
-    adding.value = true
-    router.post(route('cart.add'), {
-        product_id:         props.product.id,
-        quantity:           quantity.value,
-        product_variant_id: selectedVariant.value?.id ?? null,
-    }, {
-        preserveScroll: true,
-        onFinish: () => adding.value = false,
-    })
+async function loadProduct() {
+    const data = await catalog.getProductBySlug(route.params.slug)
+    product.value = data
+    selectedImage.value = data?.main_image ?? null
+    selectedVariant.value = null
+    selectedOptions.value = {}
+
+    if (data) {
+        related.value = await catalog.getRelatedProducts(data.category.slug, data.id)
+    }
 }
+
+async function addToCart() {
+    if (!isInStock.value || !product.value) return
+    adding.value = true
+    await cart.addItem(
+        product.value.id,
+        quantity.value,
+        selectedVariant.value?.id ?? null,
+    )
+    adding.value = false
+}
+
+watch(() => route.params.slug, loadProduct)
+
+onMounted(loadProduct)
 </script>
 
 <template>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div v-if="product" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <!-- Breadcrumb -->
         <nav class="flex items-center gap-2 text-xs text-stone-400 mb-8">
-            <Link :href="route('store.home')" class="hover:text-stone-700">Inicio</Link>
+            <RouterLink to="/" class="hover:text-stone-700">Inicio</RouterLink>
             <span>/</span>
-            <Link :href="route('categories.show', product.category.slug)" class="hover:text-stone-700">
+            <RouterLink :to="`/categoria/${product.category.slug}`" class="hover:text-stone-700">
                 {{ product.category.name }}
-            </Link>
+            </RouterLink>
             <span>/</span>
             <span class="text-stone-600">{{ product.name }}</span>
         </nav>
 
-        <!-- ── Producto principal ─────────────────────────── -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
             <!-- Galería -->
             <div class="space-y-4">
-                <!-- Imagen principal -->
                 <div class="aspect-[4/5] bg-stone-100 overflow-hidden">
                     <img
                         v-if="selectedImage"
-                        :src="`/${selectedImage}`"
+                        :src="productImage(selectedImage)"
                         :alt="product.name"
                         class="w-full h-full object-cover"
                     />
@@ -103,7 +113,6 @@ function addToCart() {
                     </div>
                 </div>
 
-                <!-- Miniaturas -->
                 <div v-if="product.images?.length" class="flex gap-3 overflow-x-auto pb-1">
                     <button
                         v-for="img in product.images"
@@ -112,14 +121,13 @@ function addToCart() {
                         class="w-20 h-20 shrink-0 bg-stone-100 overflow-hidden border-2 transition-colors"
                         :class="selectedImage === img.path ? 'border-stone-900' : 'border-transparent'"
                     >
-                        <img :src="`/${img.path}`" :alt="img.alt" class="w-full h-full object-cover"/>
+                        <img :src="productImage(img.path)" :alt="img.alt" class="w-full h-full object-cover"/>
                     </button>
                 </div>
             </div>
 
             <!-- Info del producto -->
             <div class="flex flex-col">
-                <!-- Categoría + nombre -->
                 <p class="text-xs text-stone-400 tracking-widest uppercase mb-2">
                     {{ product.category.name }}
                 </p>
@@ -127,7 +135,6 @@ function addToCart() {
                     {{ product.name }}
                 </h1>
 
-                <!-- Rating -->
                 <div v-if="product.reviews?.length" class="flex items-center gap-2 mt-3">
                     <div class="flex">
                         <span v-for="i in 5" :key="i" class="text-sm"
@@ -140,7 +147,6 @@ function addToCart() {
                     </span>
                 </div>
 
-                <!-- Precio -->
                 <div class="flex items-baseline gap-3 mt-6">
                     <span class="font-display text-3xl text-stone-900">
                         ${{ Number(effectivePrice).toLocaleString('es-AR') }}
@@ -154,14 +160,12 @@ function addToCart() {
                     </span>
                 </div>
 
-                <!-- Descripción corta -->
                 <p class="mt-4 text-stone-600 text-sm leading-relaxed">
                     {{ product.short_description }}
                 </p>
 
                 <div class="border-t border-stone-100 mt-6 pt-6 space-y-6">
 
-                    <!-- Variantes -->
                     <div v-for="(values, key) in variantOptions" :key="key">
                         <h3 class="text-xs font-medium tracking-widest uppercase text-stone-500 mb-3">
                             {{ key }}
@@ -184,7 +188,6 @@ function addToCart() {
                         </div>
                     </div>
 
-                    <!-- Cantidad -->
                     <div>
                         <h3 class="text-xs font-medium tracking-widest uppercase text-stone-500 mb-3">Cantidad</h3>
                         <div class="flex items-center border border-stone-200 w-fit">
@@ -200,7 +203,6 @@ function addToCart() {
                         </div>
                     </div>
 
-                    <!-- Stock -->
                     <p class="text-xs flex items-center gap-1.5"
                         :class="isInStock ? 'text-green-600' : 'text-red-500'">
                         <span class="w-1.5 h-1.5 rounded-full"
@@ -208,7 +210,6 @@ function addToCart() {
                         {{ isInStock ? 'En stock' : 'Sin stock' }}
                     </p>
 
-                    <!-- Botón agregar -->
                     <button
                         @click="addToCart"
                         :disabled="!isInStock || adding"
@@ -217,7 +218,6 @@ function addToCart() {
                         {{ adding ? 'Agregando...' : 'Agregar al carrito' }}
                     </button>
 
-                    <!-- SKU -->
                     <p v-if="product.sku" class="text-xs text-stone-400">
                         SKU: {{ product.sku }}
                     </p>
@@ -225,7 +225,7 @@ function addToCart() {
             </div>
         </div>
 
-        <!-- ── Tabs: descripción + reseñas ───────────────── -->
+        <!-- Tabs -->
         <div class="mt-20 border-t border-stone-200">
             <div class="flex gap-8 border-b border-stone-200">
                 <button
@@ -241,14 +241,12 @@ function addToCart() {
                 </button>
             </div>
 
-            <!-- Descripción -->
             <div v-if="activeTab === 'description'" class="py-8 max-w-2xl">
                 <p class="text-stone-600 leading-relaxed whitespace-pre-line">
                     {{ product.description }}
                 </p>
             </div>
 
-            <!-- Reseñas -->
             <div v-if="activeTab === 'reviews'" class="py-8">
                 <div v-if="product.reviews?.length" class="space-y-6 max-w-2xl">
                     <div v-for="review in product.reviews" :key="review.id"
@@ -275,14 +273,13 @@ function addToCart() {
             </div>
         </div>
 
-        <!-- ── Productos relacionados ─────────────────────── -->
         <div v-if="related?.length" class="mt-20">
             <h2 class="font-display text-3xl text-stone-900 mb-8">También te puede gustar</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10">
                 <ProductCard
-                    v-for="product in related"
-                    :key="product.id"
-                    :product="product"
+                    v-for="item in related"
+                    :key="item.id"
+                    :product="item"
                 />
             </div>
         </div>
