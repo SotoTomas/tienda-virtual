@@ -12,10 +12,10 @@
     "stock": 50,
     "is_featured": true,
     "is_active": true,
-    "main_image": "https://picsum.photos/seed/rem001/600/800",
+    "main_image": "../images/products/girl.jpg",
     "images": [
-      { "path": "https://picsum.photos/seed/rem001/600/800", "alt": "Remera Básica Algodón", "is_main": true },
-      { "path": "https://picsum.photos/seed/rem001b/600/800", "alt": "Remera Básica Algodón - detalle", "is_main": false }
+      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón", "is_main": true },
+      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón - detalle", "is_main": false }
     ],
     "variants": [
       { "id": 1, "name": "Blanco - S", "options": { "color": "Blanco", "talle": "S" }, "price": null, "stock": 10 },
