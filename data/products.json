@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "name": "Remera Básica Algodón",
+    "slug": "remera-basica-algodon",
+    "category_slug": "remeras",
+    "short_description": "Remera 100% algodón, corte regular.",
+    "description": "Remera de algodón peinado de alta calidad. Disponible en múltiples colores y talles. Ideal para el uso diario.",
+    "price": 8500,
+    "compare_price": 11000,
+    "sku": "REM-001",
+    "stock": 50,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "../images/products/girl.jpg",
+    "images": [
+      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón", "is_main": true },
+      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón - detalle", "is_main": false }
+    ],
+    "variants": [
+      { "id": 1, "name": "Blanco - S", "options": { "color": "Blanco", "talle": "S" }, "price": null, "stock": 10 },
+      { "id": 2, "name": "Blanco - M", "options": { "color": "Blanco", "talle": "M" }, "price": null, "stock": 15 },
+      { "id": 3, "name": "Blanco - L", "options": { "color": "Blanco", "talle": "L" }, "price": null, "stock": 10 },
+      { "id": 4, "name": "Negro - S", "options": { "color": "Negro", "talle": "S" }, "price": null, "stock": 5 },
+      { "id": 5, "name": "Negro - M", "options": { "color": "Negro", "talle": "M" }, "price": null, "stock": 10 }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "title": "Excelente calidad",
+        "body": "Muy cómoda y el talle es exacto. La recomiendo.",
+        "user_name": "María G.",
+        "created_at": "hace 2 semanas"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "title": "Buena relación precio-calidad",
+        "body": "El algodón se siente premium. Volvería a comprar.",
+        "user_name": "Lucas P.",
+        "created_at": "hace 1 mes"
+      }
+    ],
+    "created_at": "2026-01-15T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Remera Estampada Oversize",
+    "slug": "remera-estampada-oversize",
+    "category_slug": "remeras",
+    "short_description": "Remera oversize con estampa frontal.",
+    "description": "Diseño urbano con corte holgado. Tela de alta gramaje.",
+    "price": 12000,
+    "compare_price": null,
+    "sku": "REM-002",
+    "stock": 30,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "https://picsum.photos/seed/rem002/600/800",
+    "images": [
+      { "path": "https://picsum.photos/seed/rem002/600/800", "alt": "Remera Estampada Oversize", "is_main": true }
+    ],
+    "variants": [
+      { "id": 6, "name": "Gris - M", "options": { "color": "Gris", "talle": "M" }, "price": null, "stock": 10 },
+      { "id": 7, "name": "Gris - L", "options": { "color": "Gris", "talle": "L" }, "price": null, "stock": 10 },
+      { "id": 8, "name": "Gris - XL", "options": { "color": "Gris", "talle": "XL" }, "price": null, "stock": 10 }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-01T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Zapatilla Running Pro",
+    "slug": "zapatilla-running-pro",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla deportiva para running.",
+    "description": "Suela de amortiguación máxima, upper de mesh transpirable. Ideal para largas distancias.",
+    "price": 65000,
+    "compare_price": 80000,
+    "sku": "ZAP-001",
+    "stock": 20,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "https://picsum.photos/seed/zap001/600/800",
+    "images": [
+      { "path": "https://picsum.photos/seed/zap001/600/800", "alt": "Zapatilla Running Pro", "is_main": true },
+      { "path": "https://picsum.photos/seed/zap001b/600/800", "alt": "Zapatilla Running Pro - lateral", "is_main": false }
+    ],
+    "variants": [
+      { "id": 9, "name": "Blanco - 39", "options": { "color": "Blanco", "talle": "39" }, "price": null, "stock": 3 },
+      { "id": 10, "name": "Blanco - 40", "options": { "color": "Blanco", "talle": "40" }, "price": null, "stock": 4 },
+      { "id": 11, "name": "Blanco - 41", "options": { "color": "Blanco", "talle": "41" }, "price": null, "stock": 5 },
+      { "id": 12, "name": "Negro - 40", "options": { "color": "Negro", "talle": "40" }, "price": null, "stock": 4 },
+      { "id": 13, "name": "Negro - 41", "options": { "color": "Negro", "talle": "41" }, "price": null, "stock": 4 }
+    ],
+    "reviews": [
+      {
+        "id": 3,
+        "rating": 5,
+        "title": "Perfectas para correr",
+        "body": "Muy buena amortiguación, las uso todos los días.",
+        "user_name": "Ana R.",
+        "created_at": "hace 3 días"
+      }
+    ],
+    "created_at": "2026-01-20T10:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Zapatilla Urbana Classic",
+    "slug": "zapatilla-urbana-classic",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla casual para el día a día.",
+    "description": "Diseño minimalista con suela vulcanizada. Combinable con cualquier outfit.",
+    "price": 45000,
+    "compare_price": null,
+    "sku": "ZAP-002",
+    "stock": 15,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "https://picsum.photos/seed/zap002/600/800",
+    "images": [
+      { "path": "https://picsum.photos/seed/zap002/600/800", "alt": "Zapatilla Urbana Classic", "is_main": true }
+    ],
+    "variants": [
+      { "id": 14, "name": "Crema - 38", "options": { "color": "Crema", "talle": "38" }, "price": null, "stock": 5 },
+      { "id": 15, "name": "Crema - 39", "options": { "color": "Crema", "talle": "39" }, "price": null, "stock": 5 },
+      { "id": 16, "name": "Crema - 40", "options": { "color": "Crema", "talle": "40" }, "price": null, "stock": 5 }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-01T10:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Bolso Tote de Cuero",
+    "slug": "bolso-tote-de-cuero",
+    "category_slug": "bolsos",
+    "short_description": "Bolso tote en cuero ecológico.",
+    "description": "Amplio interior con bolsillo organizador. Asa de mano y bandolera removible.",
+    "price": 28000,
+    "compare_price": 35000,
+    "sku": "BOL-001",
+    "stock": 10,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "https://picsum.photos/seed/bol001/600/800",
+    "images": [
+      { "path": "https://picsum.photos/seed/bol001/600/800", "alt": "Bolso Tote de Cuero", "is_main": true }
+    ],
+    "variants": [
+      { "id": 17, "name": "Negro", "options": { "color": "Negro" }, "price": null, "stock": 4 },
+      { "id": 18, "name": "Camel", "options": { "color": "Camel" }, "price": null, "stock": 3 },
+      { "id": 19, "name": "Bordó", "options": { "color": "Bordó" }, "price": null, "stock": 3 }
+    ],
+    "reviews": [
+      {
+        "id": 4,
+        "rating": 5,
+        "title": "Hermoso y espacioso",
+        "body": "El cuero ecológico se ve muy bien. Cabe todo lo que necesito.",
+        "user_name": "Carolina M.",
+        "created_at": "hace 1 semana"
+      }
+    ],
+    "created_at": "2026-02-10T10:00:00Z"
+  }
+]

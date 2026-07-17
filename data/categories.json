@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Ropa",
+    "slug": "ropa",
+    "description": "Indumentaria para hombre y mujer",
+    "children": [
+      { "id": 4, "name": "Remeras", "slug": "remeras", "parent_id": 1 },
+      { "id": 5, "name": "Pantalones", "slug": "pantalones", "parent_id": 1 },
+      { "id": 6, "name": "Camperas", "slug": "camperas", "parent_id": 1 },
+      { "id": 7, "name": "Vestidos", "slug": "vestidos", "parent_id": 1 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Calzado",
+    "slug": "calzado",
+    "description": "Zapatillas, zapatos y sandalias",
+    "children": [
+      { "id": 8, "name": "Zapatillas", "slug": "zapatillas", "parent_id": 2 },
+      { "id": 9, "name": "Zapatos", "slug": "zapatos", "parent_id": 2 },
+      { "id": 10, "name": "Sandalias", "slug": "sandalias", "parent_id": 2 },
+      { "id": 11, "name": "Botas", "slug": "botas", "parent_id": 2 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Accesorios",
+    "slug": "accesorios",
+    "description": "Bolsos, carteras y complementos",
+    "children": [
+      { "id": 12, "name": "Bolsos", "slug": "bolsos", "parent_id": 3 },
+      { "id": 13, "name": "Carteras", "slug": "carteras", "parent_id": 3 },
+      { "id": 14, "name": "Cinturones", "slug": "cinturones", "parent_id": 3 },
+      { "id": 15, "name": "Gorros", "slug": "gorros", "parent_id": 3 }
+    ]
+  }
+]
