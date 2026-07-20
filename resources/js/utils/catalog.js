@@ -1,7 +1,16 @@
 export function productImage(path) {
     if (!path) return null
-    if (path.startsWith('http://') || path.startsWith('https://')) return path
-    return `/${path.replace(/^\//, '')}`
+
+    // URLs externas
+    if (/^https?:\/\//i.test(path)) {
+        return path
+    }
+
+    // Respetar el BASE_URL configurado en Vite
+    return new URL(
+        path.replace(/^\/+/, ''),
+        window.location.origin + import.meta.env.BASE_URL
+    ).toString()
 }
 
 export function formatProductCard(product, categoriesBySlug) {

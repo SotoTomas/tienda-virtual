@@ -12,17 +12,70 @@
     "stock": 50,
     "is_featured": true,
     "is_active": true,
-    "main_image": "../images/products/girl.jpg",
+    "main_image": "/images/products/remera.jpg",
     "images": [
-      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón", "is_main": true },
-      { "path": "../images/products/girl.jpg", "alt": "Remera Básica Algodón - detalle", "is_main": false }
+      {
+        "path": "https://picsum.photos/seed/rem001/600/800",
+        "alt": "Remera Básica Algodón",
+        "is_main": true
+      },
+      {
+        "path": "https://picsum.photos/seed/rem001b/600/800",
+        "alt": "Remera Básica Algodón - detalle",
+        "is_main": false
+      }
     ],
     "variants": [
-      { "id": 1, "name": "Blanco - S", "options": { "color": "Blanco", "talle": "S" }, "price": null, "stock": 10 },
-      { "id": 2, "name": "Blanco - M", "options": { "color": "Blanco", "talle": "M" }, "price": null, "stock": 15 },
-      { "id": 3, "name": "Blanco - L", "options": { "color": "Blanco", "talle": "L" }, "price": null, "stock": 10 },
-      { "id": 4, "name": "Negro - S", "options": { "color": "Negro", "talle": "S" }, "price": null, "stock": 5 },
-      { "id": 5, "name": "Negro - M", "options": { "color": "Negro", "talle": "M" }, "price": null, "stock": 10 }
+      {
+        "id": 1,
+        "name": "Blanco - S",
+        "options": {
+          "color": "Blanco",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 2,
+        "name": "Blanco - M",
+        "options": {
+          "color": "Blanco",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 3,
+        "name": "Blanco - L",
+        "options": {
+          "color": "Blanco",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 4,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 5,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 10
+      }
     ],
     "reviews": [
       {
@@ -57,14 +110,45 @@
     "stock": 30,
     "is_featured": false,
     "is_active": true,
-    "main_image": "https://picsum.photos/seed/rem002/600/800",
+    "main_image": "/images/products/remera-estampada-os.png",
     "images": [
-      { "path": "https://picsum.photos/seed/rem002/600/800", "alt": "Remera Estampada Oversize", "is_main": true }
+      {
+        "path": "https://picsum.photos/seed/rem002/600/800",
+        "alt": "Remera Estampada Oversize",
+        "is_main": true
+      }
     ],
     "variants": [
-      { "id": 6, "name": "Gris - M", "options": { "color": "Gris", "talle": "M" }, "price": null, "stock": 10 },
-      { "id": 7, "name": "Gris - L", "options": { "color": "Gris", "talle": "L" }, "price": null, "stock": 10 },
-      { "id": 8, "name": "Gris - XL", "options": { "color": "Gris", "talle": "XL" }, "price": null, "stock": 10 }
+      {
+        "id": 6,
+        "name": "Gris - M",
+        "options": {
+          "color": "Gris",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 7,
+        "name": "Gris - L",
+        "options": {
+          "color": "Gris",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 8,
+        "name": "Gris - XL",
+        "options": {
+          "color": "Gris",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 10
+      }
     ],
     "reviews": [],
     "created_at": "2026-02-01T10:00:00Z"
@@ -82,17 +166,70 @@
     "stock": 20,
     "is_featured": true,
     "is_active": true,
-    "main_image": "https://picsum.photos/seed/zap001/600/800",
+    "main_image": "images/products/zapatillas-running-pro.png",
     "images": [
-      { "path": "https://picsum.photos/seed/zap001/600/800", "alt": "Zapatilla Running Pro", "is_main": true },
-      { "path": "https://picsum.photos/seed/zap001b/600/800", "alt": "Zapatilla Running Pro - lateral", "is_main": false }
+      {
+        "path": "https://picsum.photos/seed/zap001/600/800",
+        "alt": "Zapatilla Running Pro",
+        "is_main": true
+      },
+      {
+        "path": "https://picsum.photos/seed/zap001b/600/800",
+        "alt": "Zapatilla Running Pro - lateral",
+        "is_main": false
+      }
     ],
     "variants": [
-      { "id": 9, "name": "Blanco - 39", "options": { "color": "Blanco", "talle": "39" }, "price": null, "stock": 3 },
-      { "id": 10, "name": "Blanco - 40", "options": { "color": "Blanco", "talle": "40" }, "price": null, "stock": 4 },
-      { "id": 11, "name": "Blanco - 41", "options": { "color": "Blanco", "talle": "41" }, "price": null, "stock": 5 },
-      { "id": 12, "name": "Negro - 40", "options": { "color": "Negro", "talle": "40" }, "price": null, "stock": 4 },
-      { "id": 13, "name": "Negro - 41", "options": { "color": "Negro", "talle": "41" }, "price": null, "stock": 4 }
+      {
+        "id": 9,
+        "name": "Blanco - 39",
+        "options": {
+          "color": "Blanco",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 10,
+        "name": "Blanco - 40",
+        "options": {
+          "color": "Blanco",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 11,
+        "name": "Blanco - 41",
+        "options": {
+          "color": "Blanco",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 12,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 13,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 4
+      }
     ],
     "reviews": [
       {
@@ -119,14 +256,45 @@
     "stock": 15,
     "is_featured": false,
     "is_active": true,
-    "main_image": "https://picsum.photos/seed/zap002/600/800",
+    "main_image": "images/products/zapatilla-urban.png",
     "images": [
-      { "path": "https://picsum.photos/seed/zap002/600/800", "alt": "Zapatilla Urbana Classic", "is_main": true }
+      {
+        "path": "https://picsum.photos/seed/zap002/600/800",
+        "alt": "Zapatilla Urbana Classic",
+        "is_main": true
+      }
     ],
     "variants": [
-      { "id": 14, "name": "Crema - 38", "options": { "color": "Crema", "talle": "38" }, "price": null, "stock": 5 },
-      { "id": 15, "name": "Crema - 39", "options": { "color": "Crema", "talle": "39" }, "price": null, "stock": 5 },
-      { "id": 16, "name": "Crema - 40", "options": { "color": "Crema", "talle": "40" }, "price": null, "stock": 5 }
+      {
+        "id": 14,
+        "name": "Crema - 38",
+        "options": {
+          "color": "Crema",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 15,
+        "name": "Crema - 39",
+        "options": {
+          "color": "Crema",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 16,
+        "name": "Crema - 40",
+        "options": {
+          "color": "Crema",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 5
+      }
     ],
     "reviews": [],
     "created_at": "2026-03-01T10:00:00Z"
@@ -146,12 +314,40 @@
     "is_active": true,
     "main_image": "https://picsum.photos/seed/bol001/600/800",
     "images": [
-      { "path": "https://picsum.photos/seed/bol001/600/800", "alt": "Bolso Tote de Cuero", "is_main": true }
+      {
+        "path": "https://picsum.photos/seed/bol001/600/800",
+        "alt": "Bolso Tote de Cuero",
+        "is_main": true
+      }
     ],
     "variants": [
-      { "id": 17, "name": "Negro", "options": { "color": "Negro" }, "price": null, "stock": 4 },
-      { "id": 18, "name": "Camel", "options": { "color": "Camel" }, "price": null, "stock": 3 },
-      { "id": 19, "name": "Bordó", "options": { "color": "Bordó" }, "price": null, "stock": 3 }
+      {
+        "id": 17,
+        "name": "Negro",
+        "options": {
+          "color": "Negro"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 18,
+        "name": "Camel",
+        "options": {
+          "color": "Camel"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 19,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 3
+      }
     ],
     "reviews": [
       {
@@ -164,5 +360,4821 @@
       }
     ],
     "created_at": "2026-02-10T10:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Remera Básica",
+    "slug": "remera-basica-rem",
+    "category_slug": "remeras",
+    "short_description": "Remera básica, ideal para tu día a día.",
+    "description": "Confeccionada en algodón de alta calidad, ideal para el uso diario. Corte cómodo y tela transpirable.",
+    "price": 12000,
+    "compare_price": 15500,
+    "sku": "REM-004",
+    "stock": 31,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/remera-basica-rem.jpg",
+    "images": [
+      {
+        "path": "images/products/remera-basica-rem.jpg",
+        "alt": "Remera Básica",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 20,
+        "name": "Beige - S",
+        "options": {
+          "color": "Beige",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 21,
+        "name": "Beige - M",
+        "options": {
+          "color": "Beige",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 22,
+        "name": "Beige - L",
+        "options": {
+          "color": "Beige",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 23,
+        "name": "Beige - XL",
+        "options": {
+          "color": "Beige",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 24,
+        "name": "Blanco - S",
+        "options": {
+          "color": "Blanco",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 25,
+        "name": "Blanco - M",
+        "options": {
+          "color": "Blanco",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 26,
+        "name": "Blanco - L",
+        "options": {
+          "color": "Blanco",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 27,
+        "name": "Blanco - XL",
+        "options": {
+          "color": "Blanco",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 6
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 7,
+    "name": "Remera Estampada",
+    "slug": "remera-estampada",
+    "category_slug": "remeras",
+    "short_description": "Remera estampada, ideal para tu día a día.",
+    "description": "Confeccionada en algodón de alta calidad, ideal para el uso diario. Corte cómodo y tela transpirable.",
+    "price": 11500,
+    "compare_price": 14500,
+    "sku": "REM-005",
+    "stock": 62,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/remera-estampada.jpg",
+    "images": [
+      {
+        "path": "images/products/remera-estampada.jpg",
+        "alt": "Remera Estampada",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 28,
+        "name": "Bordó - S",
+        "options": {
+          "color": "Bordó",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 29,
+        "name": "Bordó - M",
+        "options": {
+          "color": "Bordó",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 30,
+        "name": "Bordó - L",
+        "options": {
+          "color": "Bordó",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 31,
+        "name": "Bordó - XL",
+        "options": {
+          "color": "Bordó",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 32,
+        "name": "Blanco - S",
+        "options": {
+          "color": "Blanco",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 33,
+        "name": "Blanco - M",
+        "options": {
+          "color": "Blanco",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 34,
+        "name": "Blanco - L",
+        "options": {
+          "color": "Blanco",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 35,
+        "name": "Blanco - XL",
+        "options": {
+          "color": "Blanco",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 4
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-05T10:00:00Z"
+  },
+  {
+    "id": 8,
+    "name": "Remera Oversize",
+    "slug": "remera-oversize",
+    "category_slug": "remeras",
+    "short_description": "Remera oversize, ideal para tu día a día.",
+    "description": "Confeccionada en algodón de alta calidad, ideal para el uso diario. Corte cómodo y tela transpirable.",
+    "price": 8000,
+    "compare_price": 9500,
+    "sku": "REM-006",
+    "stock": 60,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/remera-oversize.jpg",
+    "images": [
+      {
+        "path": "images/products/remera-oversize.jpg",
+        "alt": "Remera Oversize",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 36,
+        "name": "Camel - S",
+        "options": {
+          "color": "Camel",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 37,
+        "name": "Camel - M",
+        "options": {
+          "color": "Camel",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 38,
+        "name": "Camel - L",
+        "options": {
+          "color": "Camel",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 39,
+        "name": "Camel - XL",
+        "options": {
+          "color": "Camel",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 40,
+        "name": "Azul - S",
+        "options": {
+          "color": "Azul",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 41,
+        "name": "Azul - M",
+        "options": {
+          "color": "Azul",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 42,
+        "name": "Azul - L",
+        "options": {
+          "color": "Azul",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 43,
+        "name": "Azul - XL",
+        "options": {
+          "color": "Azul",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 11
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 9,
+    "name": "Remera Cuello V",
+    "slug": "remera-cuello-v",
+    "category_slug": "remeras",
+    "short_description": "Remera cuello v, ideal para tu día a día.",
+    "description": "Confeccionada en algodón de alta calidad, ideal para el uso diario. Corte cómodo y tela transpirable.",
+    "price": 7500,
+    "compare_price": null,
+    "sku": "REM-007",
+    "stock": 71,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/remera-cuello-v.jpg",
+    "images": [
+      {
+        "path": "images/products/remera-cuello-v.jpg",
+        "alt": "Remera Cuello V",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 44,
+        "name": "Azul - S",
+        "options": {
+          "color": "Azul",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 45,
+        "name": "Azul - M",
+        "options": {
+          "color": "Azul",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 46,
+        "name": "Azul - L",
+        "options": {
+          "color": "Azul",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 47,
+        "name": "Azul - XL",
+        "options": {
+          "color": "Azul",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 48,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 49,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 50,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 51,
+        "name": "Negro - XL",
+        "options": {
+          "color": "Negro",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 11
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-27T10:00:00Z"
+  },
+  {
+    "id": 10,
+    "name": "Remera Manga Larga",
+    "slug": "remera-manga-larga",
+    "category_slug": "remeras",
+    "short_description": "Remera manga larga, ideal para tu día a día.",
+    "description": "Confeccionada en algodón de alta calidad, ideal para el uso diario. Corte cómodo y tela transpirable.",
+    "price": 12500,
+    "compare_price": null,
+    "sku": "REM-008",
+    "stock": 68,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/remera-manga-larga.jpg",
+    "images": [
+      {
+        "path": "images/products/remera-manga-larga.jpg",
+        "alt": "Remera Manga Larga",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 52,
+        "name": "Blanco - S",
+        "options": {
+          "color": "Blanco",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 53,
+        "name": "Blanco - M",
+        "options": {
+          "color": "Blanco",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 54,
+        "name": "Blanco - L",
+        "options": {
+          "color": "Blanco",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 55,
+        "name": "Blanco - XL",
+        "options": {
+          "color": "Blanco",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 56,
+        "name": "Azul - S",
+        "options": {
+          "color": "Azul",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 57,
+        "name": "Azul - M",
+        "options": {
+          "color": "Azul",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 58,
+        "name": "Azul - L",
+        "options": {
+          "color": "Azul",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 59,
+        "name": "Azul - XL",
+        "options": {
+          "color": "Azul",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 10
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 11,
+    "name": "Pantalón Cargo",
+    "slug": "pantalon-cargo",
+    "category_slug": "pantalones",
+    "short_description": "Pantalón cargo, ideal para tu día a día.",
+    "description": "Tela resistente con terminaciones prolijas. Corte pensado para acompañar el movimiento durante todo el día.",
+    "price": 22500,
+    "compare_price": null,
+    "sku": "PAN-002",
+    "stock": 73,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/pantalon-cargo.jpg",
+    "images": [
+      {
+        "path": "images/products/pantalon-cargo.jpg",
+        "alt": "Pantalón Cargo",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 60,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 61,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 62,
+        "name": "Camel - 42",
+        "options": {
+          "color": "Camel",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 63,
+        "name": "Camel - 44",
+        "options": {
+          "color": "Camel",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 64,
+        "name": "Beige - 38",
+        "options": {
+          "color": "Beige",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 65,
+        "name": "Beige - 40",
+        "options": {
+          "color": "Beige",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 66,
+        "name": "Beige - 42",
+        "options": {
+          "color": "Beige",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 67,
+        "name": "Beige - 44",
+        "options": {
+          "color": "Beige",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 14
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-02T10:00:00Z"
+  },
+  {
+    "id": 12,
+    "name": "Pantalón Chino",
+    "slug": "pantalon-chino",
+    "category_slug": "pantalones",
+    "short_description": "Pantalón chino, ideal para tu día a día.",
+    "description": "Tela resistente con terminaciones prolijas. Corte pensado para acompañar el movimiento durante todo el día.",
+    "price": 23000,
+    "compare_price": null,
+    "sku": "PAN-003",
+    "stock": 65,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/pantalon-chino.jpg",
+    "images": [
+      {
+        "path": "images/products/pantalon-chino.jpg",
+        "alt": "Pantalón Chino",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 68,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 69,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 70,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 71,
+        "name": "Azul - 44",
+        "options": {
+          "color": "Azul",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 72,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 73,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 74,
+        "name": "Camel - 42",
+        "options": {
+          "color": "Camel",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 75,
+        "name": "Camel - 44",
+        "options": {
+          "color": "Camel",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 1
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-02T10:00:00Z"
+  },
+  {
+    "id": 13,
+    "name": "Pantalón Jogger",
+    "slug": "pantalon-jogger",
+    "category_slug": "pantalones",
+    "short_description": "Pantalón jogger, ideal para tu día a día.",
+    "description": "Tela resistente con terminaciones prolijas. Corte pensado para acompañar el movimiento durante todo el día.",
+    "price": 20000,
+    "compare_price": null,
+    "sku": "PAN-004",
+    "stock": 59,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/pantalon-jogger.jpg",
+    "images": [
+      {
+        "path": "images/products/pantalon-jogger.jpg",
+        "alt": "Pantalón Jogger",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 76,
+        "name": "Bordó - 38",
+        "options": {
+          "color": "Bordó",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 77,
+        "name": "Bordó - 40",
+        "options": {
+          "color": "Bordó",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 78,
+        "name": "Bordó - 42",
+        "options": {
+          "color": "Bordó",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 79,
+        "name": "Bordó - 44",
+        "options": {
+          "color": "Bordó",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 80,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 81,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 82,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 83,
+        "name": "Azul - 44",
+        "options": {
+          "color": "Azul",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 8
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-05T10:00:00Z"
+  },
+  {
+    "id": 14,
+    "name": "Pantalón Recto",
+    "slug": "pantalon-recto",
+    "category_slug": "pantalones",
+    "short_description": "Pantalón recto, ideal para tu día a día.",
+    "description": "Tela resistente con terminaciones prolijas. Corte pensado para acompañar el movimiento durante todo el día.",
+    "price": 18500,
+    "compare_price": 22000,
+    "sku": "PAN-005",
+    "stock": 51,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/pantalon-recto.jpg",
+    "images": [
+      {
+        "path": "images/products/pantalon-recto.jpg",
+        "alt": "Pantalón Recto",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 84,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 85,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 86,
+        "name": "Negro - 42",
+        "options": {
+          "color": "Negro",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 87,
+        "name": "Negro - 44",
+        "options": {
+          "color": "Negro",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 88,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 89,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 90,
+        "name": "Camel - 42",
+        "options": {
+          "color": "Camel",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 91,
+        "name": "Camel - 44",
+        "options": {
+          "color": "Camel",
+          "talle": "44"
+        },
+        "price": null,
+        "stock": 5
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-04-01T10:00:00Z"
+  },
+  {
+    "id": 15,
+    "name": "Campera Bomber",
+    "slug": "campera-bomber",
+    "category_slug": "camperas",
+    "short_description": "Campera bomber, ideal para tu día a día.",
+    "description": "Diseño versátil para las estaciones frías. Forro interior e interior cálido, ideal para combinar.",
+    "price": 30000,
+    "compare_price": null,
+    "sku": "CAM-002",
+    "stock": 42,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/campera-bomber.jpg",
+    "images": [
+      {
+        "path": "images/products/campera-bomber.jpg",
+        "alt": "Campera Bomber",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 92,
+        "name": "Verde - S",
+        "options": {
+          "color": "Verde",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 93,
+        "name": "Verde - M",
+        "options": {
+          "color": "Verde",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 94,
+        "name": "Verde - L",
+        "options": {
+          "color": "Verde",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 95,
+        "name": "Verde - XL",
+        "options": {
+          "color": "Verde",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 96,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 97,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 98,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 99,
+        "name": "Negro - XL",
+        "options": {
+          "color": "Negro",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 2
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 16,
+    "name": "Campera Rompeviento",
+    "slug": "campera-rompeviento",
+    "category_slug": "camperas",
+    "short_description": "Campera rompeviento, ideal para tu día a día.",
+    "description": "Diseño versátil para las estaciones frías. Forro interior e interior cálido, ideal para combinar.",
+    "price": 55000,
+    "compare_price": null,
+    "sku": "CAM-003",
+    "stock": 74,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/campera-rompeviento.jpg",
+    "images": [
+      {
+        "path": "images/products/campera-rompeviento.jpg",
+        "alt": "Campera Rompeviento",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 100,
+        "name": "Gris - S",
+        "options": {
+          "color": "Gris",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 101,
+        "name": "Gris - M",
+        "options": {
+          "color": "Gris",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 102,
+        "name": "Gris - L",
+        "options": {
+          "color": "Gris",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 103,
+        "name": "Gris - XL",
+        "options": {
+          "color": "Gris",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 104,
+        "name": "Blanco - S",
+        "options": {
+          "color": "Blanco",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 105,
+        "name": "Blanco - M",
+        "options": {
+          "color": "Blanco",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 106,
+        "name": "Blanco - L",
+        "options": {
+          "color": "Blanco",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 107,
+        "name": "Blanco - XL",
+        "options": {
+          "color": "Blanco",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 12
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-05T10:00:00Z"
+  },
+  {
+    "id": 17,
+    "name": "Campera De Jean",
+    "slug": "campera-de-jean",
+    "category_slug": "camperas",
+    "short_description": "Campera de jean, ideal para tu día a día.",
+    "description": "Diseño versátil para las estaciones frías. Forro interior e interior cálido, ideal para combinar.",
+    "price": 44500,
+    "compare_price": null,
+    "sku": "CAM-004",
+    "stock": 40,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/campera-de-jean.jpg",
+    "images": [
+      {
+        "path": "images/products/campera-de-jean.jpg",
+        "alt": "Campera De Jean",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 108,
+        "name": "Verde - S",
+        "options": {
+          "color": "Verde",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 109,
+        "name": "Verde - M",
+        "options": {
+          "color": "Verde",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 110,
+        "name": "Verde - L",
+        "options": {
+          "color": "Verde",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 111,
+        "name": "Verde - XL",
+        "options": {
+          "color": "Verde",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 112,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 113,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 114,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 115,
+        "name": "Negro - XL",
+        "options": {
+          "color": "Negro",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 0
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 18,
+    "name": "Campera Acolchada",
+    "slug": "campera-acolchada",
+    "category_slug": "camperas",
+    "short_description": "Campera acolchada, ideal para tu día a día.",
+    "description": "Diseño versátil para las estaciones frías. Forro interior e interior cálido, ideal para combinar.",
+    "price": 37500,
+    "compare_price": 43500,
+    "sku": "CAM-005",
+    "stock": 77,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/campera-acolchada.jpg",
+    "images": [
+      {
+        "path": "images/products/campera-acolchada.jpg",
+        "alt": "Campera Acolchada",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 116,
+        "name": "Camel - S",
+        "options": {
+          "color": "Camel",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 117,
+        "name": "Camel - M",
+        "options": {
+          "color": "Camel",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 118,
+        "name": "Camel - L",
+        "options": {
+          "color": "Camel",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 119,
+        "name": "Camel - XL",
+        "options": {
+          "color": "Camel",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 120,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 121,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 122,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 123,
+        "name": "Negro - XL",
+        "options": {
+          "color": "Negro",
+          "talle": "XL"
+        },
+        "price": null,
+        "stock": 15
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 19,
+    "name": "Vestido Midi",
+    "slug": "vestido-midi",
+    "category_slug": "vestidos",
+    "short_description": "Vestido midi, ideal para tu día a día.",
+    "description": "Tela liviana con caída natural. Un básico versátil para el día o la noche.",
+    "price": 21000,
+    "compare_price": 26000,
+    "sku": "VES-002",
+    "stock": 41,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/vestido-midi.jpg",
+    "images": [
+      {
+        "path": "images/products/vestido-midi.jpg",
+        "alt": "Vestido Midi",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 124,
+        "name": "Bordó - S",
+        "options": {
+          "color": "Bordó",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 125,
+        "name": "Bordó - M",
+        "options": {
+          "color": "Bordó",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 126,
+        "name": "Bordó - L",
+        "options": {
+          "color": "Bordó",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 127,
+        "name": "Beige - S",
+        "options": {
+          "color": "Beige",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 128,
+        "name": "Beige - M",
+        "options": {
+          "color": "Beige",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 129,
+        "name": "Beige - L",
+        "options": {
+          "color": "Beige",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 10
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 20,
+    "name": "Vestido Camisero",
+    "slug": "vestido-camisero",
+    "category_slug": "vestidos",
+    "short_description": "Vestido camisero, ideal para tu día a día.",
+    "description": "Tela liviana con caída natural. Un básico versátil para el día o la noche.",
+    "price": 26000,
+    "compare_price": 32500,
+    "sku": "VES-003",
+    "stock": 50,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/vestido-camisero.jpg",
+    "images": [
+      {
+        "path": "images/products/vestido-camisero.jpg",
+        "alt": "Vestido Camisero",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 130,
+        "name": "Gris - S",
+        "options": {
+          "color": "Gris",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 131,
+        "name": "Gris - M",
+        "options": {
+          "color": "Gris",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 132,
+        "name": "Gris - L",
+        "options": {
+          "color": "Gris",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 133,
+        "name": "Beige - S",
+        "options": {
+          "color": "Beige",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 134,
+        "name": "Beige - M",
+        "options": {
+          "color": "Beige",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 135,
+        "name": "Beige - L",
+        "options": {
+          "color": "Beige",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 14
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-04-01T10:00:00Z"
+  },
+  {
+    "id": 21,
+    "name": "Vestido Fluido",
+    "slug": "vestido-fluido",
+    "category_slug": "vestidos",
+    "short_description": "Vestido fluido, ideal para tu día a día.",
+    "description": "Tela liviana con caída natural. Un básico versátil para el día o la noche.",
+    "price": 21000,
+    "compare_price": 28500,
+    "sku": "VES-004",
+    "stock": 61,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/vestido-fluido.jpg",
+    "images": [
+      {
+        "path": "images/products/vestido-fluido.jpg",
+        "alt": "Vestido Fluido",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 136,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 137,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 138,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 139,
+        "name": "Verde - S",
+        "options": {
+          "color": "Verde",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 140,
+        "name": "Verde - M",
+        "options": {
+          "color": "Verde",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 141,
+        "name": "Verde - L",
+        "options": {
+          "color": "Verde",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 6
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 22,
+    "name": "Vestido Cruzado",
+    "slug": "vestido-cruzado",
+    "category_slug": "vestidos",
+    "short_description": "Vestido cruzado, ideal para tu día a día.",
+    "description": "Tela liviana con caída natural. Un básico versátil para el día o la noche.",
+    "price": 23500,
+    "compare_price": null,
+    "sku": "VES-005",
+    "stock": 61,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/vestido-cruzado.jpg",
+    "images": [
+      {
+        "path": "images/products/vestido-cruzado.jpg",
+        "alt": "Vestido Cruzado",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 142,
+        "name": "Bordó - S",
+        "options": {
+          "color": "Bordó",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 143,
+        "name": "Bordó - M",
+        "options": {
+          "color": "Bordó",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 144,
+        "name": "Bordó - L",
+        "options": {
+          "color": "Bordó",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 145,
+        "name": "Gris - S",
+        "options": {
+          "color": "Gris",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 146,
+        "name": "Gris - M",
+        "options": {
+          "color": "Gris",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 147,
+        "name": "Gris - L",
+        "options": {
+          "color": "Gris",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 6
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 23,
+    "name": "Zapatilla Running Pro",
+    "slug": "zapatilla-running-pro-zap",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla running pro, ideal para tu día a día.",
+    "description": "Suela con buena amortiguación y upper transpirable. Pensada para el uso diario o deportivo.",
+    "price": 78000,
+    "compare_price": null,
+    "sku": "ZAP-004",
+    "stock": 44,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapatilla-running-pro-zap.jpg",
+    "images": [
+      {
+        "path": "images/products/zapatilla-running-pro-zap.jpg",
+        "alt": "Zapatilla Running Pro",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 148,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 149,
+        "name": "Negro - 39",
+        "options": {
+          "color": "Negro",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 150,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 151,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 152,
+        "name": "Negro - 42",
+        "options": {
+          "color": "Negro",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 153,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 154,
+        "name": "Camel - 39",
+        "options": {
+          "color": "Camel",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 155,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 156,
+        "name": "Camel - 41",
+        "options": {
+          "color": "Camel",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 157,
+        "name": "Camel - 42",
+        "options": {
+          "color": "Camel",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 2
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 24,
+    "name": "Zapatilla Urbana Classic",
+    "slug": "zapatilla-urbana-classic-zap",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla urbana classic, ideal para tu día a día.",
+    "description": "Suela con buena amortiguación y upper transpirable. Pensada para el uso diario o deportivo.",
+    "price": 66500,
+    "compare_price": 88500,
+    "sku": "ZAP-005",
+    "stock": 77,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/zapatilla-urbana-classic-zap.jpg",
+    "images": [
+      {
+        "path": "images/products/zapatilla-urbana-classic-zap.jpg",
+        "alt": "Zapatilla Urbana Classic",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 158,
+        "name": "Beige - 38",
+        "options": {
+          "color": "Beige",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 159,
+        "name": "Beige - 39",
+        "options": {
+          "color": "Beige",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 160,
+        "name": "Beige - 40",
+        "options": {
+          "color": "Beige",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 161,
+        "name": "Beige - 41",
+        "options": {
+          "color": "Beige",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 162,
+        "name": "Beige - 42",
+        "options": {
+          "color": "Beige",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 163,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 164,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 165,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 166,
+        "name": "Azul - 41",
+        "options": {
+          "color": "Azul",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 167,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 12
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-27T10:00:00Z"
+  },
+  {
+    "id": 25,
+    "name": "Zapatilla Training",
+    "slug": "zapatilla-training",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla training, ideal para tu día a día.",
+    "description": "Suela con buena amortiguación y upper transpirable. Pensada para el uso diario o deportivo.",
+    "price": 70000,
+    "compare_price": 91000,
+    "sku": "ZAP-006",
+    "stock": 68,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapatilla-training.jpg",
+    "images": [
+      {
+        "path": "images/products/zapatilla-training.jpg",
+        "alt": "Zapatilla Training",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 168,
+        "name": "Blanco - 38",
+        "options": {
+          "color": "Blanco",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 169,
+        "name": "Blanco - 39",
+        "options": {
+          "color": "Blanco",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 170,
+        "name": "Blanco - 40",
+        "options": {
+          "color": "Blanco",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 171,
+        "name": "Blanco - 41",
+        "options": {
+          "color": "Blanco",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 172,
+        "name": "Blanco - 42",
+        "options": {
+          "color": "Blanco",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 173,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 174,
+        "name": "Negro - 39",
+        "options": {
+          "color": "Negro",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 175,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 176,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 177,
+        "name": "Negro - 42",
+        "options": {
+          "color": "Negro",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 11
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-20T10:00:00Z"
+  },
+  {
+    "id": 26,
+    "name": "Zapatilla Retro",
+    "slug": "zapatilla-retro",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla retro, ideal para tu día a día.",
+    "description": "Suela con buena amortiguación y upper transpirable. Pensada para el uso diario o deportivo.",
+    "price": 75500,
+    "compare_price": null,
+    "sku": "ZAP-007",
+    "stock": 57,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapatilla-retro.jpg",
+    "images": [
+      {
+        "path": "images/products/zapatilla-retro.jpg",
+        "alt": "Zapatilla Retro",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 178,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 179,
+        "name": "Negro - 39",
+        "options": {
+          "color": "Negro",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 180,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 181,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 182,
+        "name": "Negro - 42",
+        "options": {
+          "color": "Negro",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 183,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 184,
+        "name": "Camel - 39",
+        "options": {
+          "color": "Camel",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 185,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 186,
+        "name": "Camel - 41",
+        "options": {
+          "color": "Camel",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 187,
+        "name": "Camel - 42",
+        "options": {
+          "color": "Camel",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 6
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 27,
+    "name": "Zapatilla Lifestyle",
+    "slug": "zapatilla-lifestyle",
+    "category_slug": "zapatillas",
+    "short_description": "Zapatilla lifestyle, ideal para tu día a día.",
+    "description": "Suela con buena amortiguación y upper transpirable. Pensada para el uso diario o deportivo.",
+    "price": 85000,
+    "compare_price": null,
+    "sku": "ZAP-008",
+    "stock": 62,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapatilla-lifestyle.jpg",
+    "images": [
+      {
+        "path": "images/products/zapatilla-lifestyle.jpg",
+        "alt": "Zapatilla Lifestyle",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 188,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 189,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 190,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 191,
+        "name": "Azul - 41",
+        "options": {
+          "color": "Azul",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 192,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 193,
+        "name": "Verde - 38",
+        "options": {
+          "color": "Verde",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 194,
+        "name": "Verde - 39",
+        "options": {
+          "color": "Verde",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 195,
+        "name": "Verde - 40",
+        "options": {
+          "color": "Verde",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 196,
+        "name": "Verde - 41",
+        "options": {
+          "color": "Verde",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 197,
+        "name": "Verde - 42",
+        "options": {
+          "color": "Verde",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 4
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-27T10:00:00Z"
+  },
+  {
+    "id": 28,
+    "name": "Zapato Clásico Cuero",
+    "slug": "zapato-clasico-cuero",
+    "category_slug": "zapatos",
+    "short_description": "Zapato clásico cuero, ideal para tu día a día.",
+    "description": "Cuero de primera calidad con plantilla acolchada. Ideal para looks formales o casuales.",
+    "price": 45500,
+    "compare_price": null,
+    "sku": "ZAT-002",
+    "stock": 43,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapato-clasico-cuero.jpg",
+    "images": [
+      {
+        "path": "images/products/zapato-clasico-cuero.jpg",
+        "alt": "Zapato Clásico Cuero",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 198,
+        "name": "Bordó - 38",
+        "options": {
+          "color": "Bordó",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 199,
+        "name": "Bordó - 39",
+        "options": {
+          "color": "Bordó",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 200,
+        "name": "Bordó - 40",
+        "options": {
+          "color": "Bordó",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 201,
+        "name": "Bordó - 41",
+        "options": {
+          "color": "Bordó",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 202,
+        "name": "Bordó - 42",
+        "options": {
+          "color": "Bordó",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 203,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 204,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 205,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 206,
+        "name": "Azul - 41",
+        "options": {
+          "color": "Azul",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 207,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 1
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 29,
+    "name": "Zapato Oxford",
+    "slug": "zapato-oxford",
+    "category_slug": "zapatos",
+    "short_description": "Zapato oxford, ideal para tu día a día.",
+    "description": "Cuero de primera calidad con plantilla acolchada. Ideal para looks formales o casuales.",
+    "price": 58500,
+    "compare_price": 70000,
+    "sku": "ZAT-003",
+    "stock": 75,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapato-oxford.jpg",
+    "images": [
+      {
+        "path": "images/products/zapato-oxford.jpg",
+        "alt": "Zapato Oxford",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 208,
+        "name": "Blanco - 38",
+        "options": {
+          "color": "Blanco",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 209,
+        "name": "Blanco - 39",
+        "options": {
+          "color": "Blanco",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 210,
+        "name": "Blanco - 40",
+        "options": {
+          "color": "Blanco",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 211,
+        "name": "Blanco - 41",
+        "options": {
+          "color": "Blanco",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 212,
+        "name": "Blanco - 42",
+        "options": {
+          "color": "Blanco",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 213,
+        "name": "Gris - 38",
+        "options": {
+          "color": "Gris",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 214,
+        "name": "Gris - 39",
+        "options": {
+          "color": "Gris",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 215,
+        "name": "Gris - 40",
+        "options": {
+          "color": "Gris",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 216,
+        "name": "Gris - 41",
+        "options": {
+          "color": "Gris",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 217,
+        "name": "Gris - 42",
+        "options": {
+          "color": "Gris",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 30,
+    "name": "Zapato Mocasín",
+    "slug": "zapato-mocasin",
+    "category_slug": "zapatos",
+    "short_description": "Zapato mocasín, ideal para tu día a día.",
+    "description": "Cuero de primera calidad con plantilla acolchada. Ideal para looks formales o casuales.",
+    "price": 52500,
+    "compare_price": 67500,
+    "sku": "ZAT-004",
+    "stock": 77,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapato-mocasin.jpg",
+    "images": [
+      {
+        "path": "images/products/zapato-mocasin.jpg",
+        "alt": "Zapato Mocasín",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 218,
+        "name": "Bordó - 38",
+        "options": {
+          "color": "Bordó",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 219,
+        "name": "Bordó - 39",
+        "options": {
+          "color": "Bordó",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 220,
+        "name": "Bordó - 40",
+        "options": {
+          "color": "Bordó",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 221,
+        "name": "Bordó - 41",
+        "options": {
+          "color": "Bordó",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 222,
+        "name": "Bordó - 42",
+        "options": {
+          "color": "Bordó",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 223,
+        "name": "Verde - 38",
+        "options": {
+          "color": "Verde",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 224,
+        "name": "Verde - 39",
+        "options": {
+          "color": "Verde",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 225,
+        "name": "Verde - 40",
+        "options": {
+          "color": "Verde",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 226,
+        "name": "Verde - 41",
+        "options": {
+          "color": "Verde",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 227,
+        "name": "Verde - 42",
+        "options": {
+          "color": "Verde",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 0
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-12T10:00:00Z"
+  },
+  {
+    "id": 31,
+    "name": "Zapato Náutico",
+    "slug": "zapato-nautico",
+    "category_slug": "zapatos",
+    "short_description": "Zapato náutico, ideal para tu día a día.",
+    "description": "Cuero de primera calidad con plantilla acolchada. Ideal para looks formales o casuales.",
+    "price": 56500,
+    "compare_price": 66000,
+    "sku": "ZAT-005",
+    "stock": 63,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/zapato-nautico.jpg",
+    "images": [
+      {
+        "path": "images/products/zapato-nautico.jpg",
+        "alt": "Zapato Náutico",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 228,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 229,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 230,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 231,
+        "name": "Azul - 41",
+        "options": {
+          "color": "Azul",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 232,
+        "name": "Azul - 42",
+        "options": {
+          "color": "Azul",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 233,
+        "name": "Gris - 38",
+        "options": {
+          "color": "Gris",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 234,
+        "name": "Gris - 39",
+        "options": {
+          "color": "Gris",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 235,
+        "name": "Gris - 40",
+        "options": {
+          "color": "Gris",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 236,
+        "name": "Gris - 41",
+        "options": {
+          "color": "Gris",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 237,
+        "name": "Gris - 42",
+        "options": {
+          "color": "Gris",
+          "talle": "42"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-05T10:00:00Z"
+  },
+  {
+    "id": 32,
+    "name": "Sandalia De Tiras",
+    "slug": "sandalia-de-tiras",
+    "category_slug": "sandalias",
+    "short_description": "Sandalia de tiras, ideal para tu día a día.",
+    "description": "Diseño liviano y cómodo para los días de calor. Suela antideslizante.",
+    "price": 19000,
+    "compare_price": null,
+    "sku": "SAN-002",
+    "stock": 70,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/sandalia-de-tiras.jpg",
+    "images": [
+      {
+        "path": "images/products/sandalia-de-tiras.jpg",
+        "alt": "Sandalia De Tiras",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 238,
+        "name": "Blanco - 36",
+        "options": {
+          "color": "Blanco",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 239,
+        "name": "Blanco - 37",
+        "options": {
+          "color": "Blanco",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 240,
+        "name": "Blanco - 38",
+        "options": {
+          "color": "Blanco",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 241,
+        "name": "Blanco - 39",
+        "options": {
+          "color": "Blanco",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 242,
+        "name": "Blanco - 40",
+        "options": {
+          "color": "Blanco",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 243,
+        "name": "Beige - 36",
+        "options": {
+          "color": "Beige",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 244,
+        "name": "Beige - 37",
+        "options": {
+          "color": "Beige",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 245,
+        "name": "Beige - 38",
+        "options": {
+          "color": "Beige",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 246,
+        "name": "Beige - 39",
+        "options": {
+          "color": "Beige",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 247,
+        "name": "Beige - 40",
+        "options": {
+          "color": "Beige",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 10
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 33,
+    "name": "Sandalia Plataforma",
+    "slug": "sandalia-plataforma",
+    "category_slug": "sandalias",
+    "short_description": "Sandalia plataforma, ideal para tu día a día.",
+    "description": "Diseño liviano y cómodo para los días de calor. Suela antideslizante.",
+    "price": 24000,
+    "compare_price": null,
+    "sku": "SAN-003",
+    "stock": 93,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/sandalia-plataforma.jpg",
+    "images": [
+      {
+        "path": "images/products/sandalia-plataforma.jpg",
+        "alt": "Sandalia Plataforma",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 248,
+        "name": "Azul - 36",
+        "options": {
+          "color": "Azul",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 249,
+        "name": "Azul - 37",
+        "options": {
+          "color": "Azul",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 250,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 251,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 252,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 253,
+        "name": "Camel - 36",
+        "options": {
+          "color": "Camel",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 254,
+        "name": "Camel - 37",
+        "options": {
+          "color": "Camel",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 255,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 256,
+        "name": "Camel - 39",
+        "options": {
+          "color": "Camel",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 257,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 9
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 34,
+    "name": "Sandalia Deportiva",
+    "slug": "sandalia-deportiva",
+    "category_slug": "sandalias",
+    "short_description": "Sandalia deportiva, ideal para tu día a día.",
+    "description": "Diseño liviano y cómodo para los días de calor. Suela antideslizante.",
+    "price": 17000,
+    "compare_price": 21000,
+    "sku": "SAN-004",
+    "stock": 84,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/sandalia-deportiva.jpg",
+    "images": [
+      {
+        "path": "images/products/sandalia-deportiva.jpg",
+        "alt": "Sandalia Deportiva",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 258,
+        "name": "Camel - 36",
+        "options": {
+          "color": "Camel",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 259,
+        "name": "Camel - 37",
+        "options": {
+          "color": "Camel",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 260,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 261,
+        "name": "Camel - 39",
+        "options": {
+          "color": "Camel",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 262,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 5
+      },
+      {
+        "id": 263,
+        "name": "Beige - 36",
+        "options": {
+          "color": "Beige",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 264,
+        "name": "Beige - 37",
+        "options": {
+          "color": "Beige",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 265,
+        "name": "Beige - 38",
+        "options": {
+          "color": "Beige",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 266,
+        "name": "Beige - 39",
+        "options": {
+          "color": "Beige",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 267,
+        "name": "Beige - 40",
+        "options": {
+          "color": "Beige",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 35,
+    "name": "Sandalia Confort",
+    "slug": "sandalia-confort",
+    "category_slug": "sandalias",
+    "short_description": "Sandalia confort, ideal para tu día a día.",
+    "description": "Diseño liviano y cómodo para los días de calor. Suela antideslizante.",
+    "price": 25000,
+    "compare_price": 29000,
+    "sku": "SAN-005",
+    "stock": 85,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/sandalia-confort.jpg",
+    "images": [
+      {
+        "path": "images/products/sandalia-confort.jpg",
+        "alt": "Sandalia Confort",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 268,
+        "name": "Beige - 36",
+        "options": {
+          "color": "Beige",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 269,
+        "name": "Beige - 37",
+        "options": {
+          "color": "Beige",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 270,
+        "name": "Beige - 38",
+        "options": {
+          "color": "Beige",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 271,
+        "name": "Beige - 39",
+        "options": {
+          "color": "Beige",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 272,
+        "name": "Beige - 40",
+        "options": {
+          "color": "Beige",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 273,
+        "name": "Verde - 36",
+        "options": {
+          "color": "Verde",
+          "talle": "36"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 274,
+        "name": "Verde - 37",
+        "options": {
+          "color": "Verde",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 275,
+        "name": "Verde - 38",
+        "options": {
+          "color": "Verde",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 276,
+        "name": "Verde - 39",
+        "options": {
+          "color": "Verde",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 277,
+        "name": "Verde - 40",
+        "options": {
+          "color": "Verde",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 0
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 36,
+    "name": "Bota Chelsea",
+    "slug": "bota-chelsea",
+    "category_slug": "botas",
+    "short_description": "Bota chelsea, ideal para tu día a día.",
+    "description": "Cuero resistente al agua con suela de alta durabilidad. Perfectas para el otoño-invierno.",
+    "price": 73000,
+    "compare_price": 95500,
+    "sku": "BOT-002",
+    "stock": 98,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bota-chelsea.jpg",
+    "images": [
+      {
+        "path": "images/products/bota-chelsea.jpg",
+        "alt": "Bota Chelsea",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 278,
+        "name": "Verde - 37",
+        "options": {
+          "color": "Verde",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 279,
+        "name": "Verde - 38",
+        "options": {
+          "color": "Verde",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 280,
+        "name": "Verde - 39",
+        "options": {
+          "color": "Verde",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 281,
+        "name": "Verde - 40",
+        "options": {
+          "color": "Verde",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 282,
+        "name": "Verde - 41",
+        "options": {
+          "color": "Verde",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 283,
+        "name": "Negro - 37",
+        "options": {
+          "color": "Negro",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 284,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 285,
+        "name": "Negro - 39",
+        "options": {
+          "color": "Negro",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 286,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 287,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 5
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-20T10:00:00Z"
+  },
+  {
+    "id": 37,
+    "name": "Bota De Cuero",
+    "slug": "bota-de-cuero",
+    "category_slug": "botas",
+    "short_description": "Bota de cuero, ideal para tu día a día.",
+    "description": "Cuero resistente al agua con suela de alta durabilidad. Perfectas para el otoño-invierno.",
+    "price": 74500,
+    "compare_price": 89500,
+    "sku": "BOT-003",
+    "stock": 90,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bota-de-cuero.jpg",
+    "images": [
+      {
+        "path": "images/products/bota-de-cuero.jpg",
+        "alt": "Bota De Cuero",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 288,
+        "name": "Azul - 37",
+        "options": {
+          "color": "Azul",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 289,
+        "name": "Azul - 38",
+        "options": {
+          "color": "Azul",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 290,
+        "name": "Azul - 39",
+        "options": {
+          "color": "Azul",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 291,
+        "name": "Azul - 40",
+        "options": {
+          "color": "Azul",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 292,
+        "name": "Azul - 41",
+        "options": {
+          "color": "Azul",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 293,
+        "name": "Bordó - 37",
+        "options": {
+          "color": "Bordó",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 294,
+        "name": "Bordó - 38",
+        "options": {
+          "color": "Bordó",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 295,
+        "name": "Bordó - 39",
+        "options": {
+          "color": "Bordó",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 296,
+        "name": "Bordó - 40",
+        "options": {
+          "color": "Bordó",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 297,
+        "name": "Bordó - 41",
+        "options": {
+          "color": "Bordó",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 10
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 38,
+    "name": "Bota Trekking",
+    "slug": "bota-trekking",
+    "category_slug": "botas",
+    "short_description": "Bota trekking, ideal para tu día a día.",
+    "description": "Cuero resistente al agua con suela de alta durabilidad. Perfectas para el otoño-invierno.",
+    "price": 54000,
+    "compare_price": 66000,
+    "sku": "BOT-004",
+    "stock": 91,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bota-trekking.jpg",
+    "images": [
+      {
+        "path": "images/products/bota-trekking.jpg",
+        "alt": "Bota Trekking",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 298,
+        "name": "Gris - 37",
+        "options": {
+          "color": "Gris",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 299,
+        "name": "Gris - 38",
+        "options": {
+          "color": "Gris",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 300,
+        "name": "Gris - 39",
+        "options": {
+          "color": "Gris",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 301,
+        "name": "Gris - 40",
+        "options": {
+          "color": "Gris",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 302,
+        "name": "Gris - 41",
+        "options": {
+          "color": "Gris",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 303,
+        "name": "Camel - 37",
+        "options": {
+          "color": "Camel",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 304,
+        "name": "Camel - 38",
+        "options": {
+          "color": "Camel",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 305,
+        "name": "Camel - 39",
+        "options": {
+          "color": "Camel",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 306,
+        "name": "Camel - 40",
+        "options": {
+          "color": "Camel",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 307,
+        "name": "Camel - 41",
+        "options": {
+          "color": "Camel",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 39,
+    "name": "Bota Urbana",
+    "slug": "bota-urbana",
+    "category_slug": "botas",
+    "short_description": "Bota urbana, ideal para tu día a día.",
+    "description": "Cuero resistente al agua con suela de alta durabilidad. Perfectas para el otoño-invierno.",
+    "price": 82500,
+    "compare_price": null,
+    "sku": "BOT-005",
+    "stock": 99,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bota-urbana.jpg",
+    "images": [
+      {
+        "path": "images/products/bota-urbana.jpg",
+        "alt": "Bota Urbana",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 308,
+        "name": "Negro - 37",
+        "options": {
+          "color": "Negro",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 309,
+        "name": "Negro - 38",
+        "options": {
+          "color": "Negro",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 310,
+        "name": "Negro - 39",
+        "options": {
+          "color": "Negro",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 311,
+        "name": "Negro - 40",
+        "options": {
+          "color": "Negro",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 312,
+        "name": "Negro - 41",
+        "options": {
+          "color": "Negro",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 313,
+        "name": "Gris - 37",
+        "options": {
+          "color": "Gris",
+          "talle": "37"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 314,
+        "name": "Gris - 38",
+        "options": {
+          "color": "Gris",
+          "talle": "38"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 315,
+        "name": "Gris - 39",
+        "options": {
+          "color": "Gris",
+          "talle": "39"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 316,
+        "name": "Gris - 40",
+        "options": {
+          "color": "Gris",
+          "talle": "40"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 317,
+        "name": "Gris - 41",
+        "options": {
+          "color": "Gris",
+          "talle": "41"
+        },
+        "price": null,
+        "stock": 0
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-12T10:00:00Z"
+  },
+  {
+    "id": 40,
+    "name": "Bolso Tote de Cuero",
+    "slug": "bolso-tote-de-cuero-bol",
+    "category_slug": "bolsos",
+    "short_description": "Bolso tote de cuero, ideal para tu día a día.",
+    "description": "Amplio interior con bolsillos organizadores. Materiales resistentes y diseño atemporal.",
+    "price": 43500,
+    "compare_price": 54000,
+    "sku": "BOL-003",
+    "stock": 15,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bolso-tote-de-cuero-bol.jpg",
+    "images": [
+      {
+        "path": "images/products/bolso-tote-de-cuero-bol.jpg",
+        "alt": "Bolso Tote de Cuero",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 318,
+        "name": "Gris",
+        "options": {
+          "color": "Gris"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 319,
+        "name": "Azul",
+        "options": {
+          "color": "Azul"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 320,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 9
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-05T10:00:00Z"
+  },
+  {
+    "id": 41,
+    "name": "Bolso Cruzado",
+    "slug": "bolso-cruzado",
+    "category_slug": "bolsos",
+    "short_description": "Bolso cruzado, ideal para tu día a día.",
+    "description": "Amplio interior con bolsillos organizadores. Materiales resistentes y diseño atemporal.",
+    "price": 23000,
+    "compare_price": null,
+    "sku": "BOL-004",
+    "stock": 6,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bolso-cruzado.jpg",
+    "images": [
+      {
+        "path": "images/products/bolso-cruzado.jpg",
+        "alt": "Bolso Cruzado",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 321,
+        "name": "Gris",
+        "options": {
+          "color": "Gris"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 322,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 323,
+        "name": "Beige",
+        "options": {
+          "color": "Beige"
+        },
+        "price": null,
+        "stock": 4
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 42,
+    "name": "Bolso Bandolera",
+    "slug": "bolso-bandolera",
+    "category_slug": "bolsos",
+    "short_description": "Bolso bandolera, ideal para tu día a día.",
+    "description": "Amplio interior con bolsillos organizadores. Materiales resistentes y diseño atemporal.",
+    "price": 35000,
+    "compare_price": 45500,
+    "sku": "BOL-005",
+    "stock": 12,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/bolso-bandolera.jpg",
+    "images": [
+      {
+        "path": "images/products/bolso-bandolera.jpg",
+        "alt": "Bolso Bandolera",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 324,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 4
+      },
+      {
+        "id": 325,
+        "name": "Gris",
+        "options": {
+          "color": "Gris"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 326,
+        "name": "Beige",
+        "options": {
+          "color": "Beige"
+        },
+        "price": null,
+        "stock": 7
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-04-01T10:00:00Z"
+  },
+  {
+    "id": 43,
+    "name": "Bolso Shopper",
+    "slug": "bolso-shopper",
+    "category_slug": "bolsos",
+    "short_description": "Bolso shopper, ideal para tu día a día.",
+    "description": "Amplio interior con bolsillos organizadores. Materiales resistentes y diseño atemporal.",
+    "price": 21500,
+    "compare_price": null,
+    "sku": "BOL-006",
+    "stock": 11,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/bolso-shopper.jpg",
+    "images": [
+      {
+        "path": "images/products/bolso-shopper.jpg",
+        "alt": "Bolso Shopper",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 327,
+        "name": "Camel",
+        "options": {
+          "color": "Camel"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 328,
+        "name": "Blanco",
+        "options": {
+          "color": "Blanco"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 329,
+        "name": "Verde",
+        "options": {
+          "color": "Verde"
+        },
+        "price": null,
+        "stock": 0
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 44,
+    "name": "Cartera De Cuero",
+    "slug": "cartera-de-cuero",
+    "category_slug": "carteras",
+    "short_description": "Cartera de cuero, ideal para tu día a día.",
+    "description": "Diseño compacto y elegante, ideal para el día a día. Interior con compartimentos.",
+    "price": 24500,
+    "compare_price": null,
+    "sku": "CAR-002",
+    "stock": 18,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cartera-de-cuero.jpg",
+    "images": [
+      {
+        "path": "images/products/cartera-de-cuero.jpg",
+        "alt": "Cartera De Cuero",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 330,
+        "name": "Gris",
+        "options": {
+          "color": "Gris"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 331,
+        "name": "Blanco",
+        "options": {
+          "color": "Blanco"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 332,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 1
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 45,
+    "name": "Cartera Sobre",
+    "slug": "cartera-sobre",
+    "category_slug": "carteras",
+    "short_description": "Cartera sobre, ideal para tu día a día.",
+    "description": "Diseño compacto y elegante, ideal para el día a día. Interior con compartimentos.",
+    "price": 33000,
+    "compare_price": null,
+    "sku": "CAR-003",
+    "stock": 12,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cartera-sobre.jpg",
+    "images": [
+      {
+        "path": "images/products/cartera-sobre.jpg",
+        "alt": "Cartera Sobre",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 333,
+        "name": "Camel",
+        "options": {
+          "color": "Camel"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 334,
+        "name": "Blanco",
+        "options": {
+          "color": "Blanco"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 335,
+        "name": "Azul",
+        "options": {
+          "color": "Azul"
+        },
+        "price": null,
+        "stock": 2
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 46,
+    "name": "Cartera Mini",
+    "slug": "cartera-mini",
+    "category_slug": "carteras",
+    "short_description": "Cartera mini, ideal para tu día a día.",
+    "description": "Diseño compacto y elegante, ideal para el día a día. Interior con compartimentos.",
+    "price": 37000,
+    "compare_price": 45000,
+    "sku": "CAR-004",
+    "stock": 13,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cartera-mini.jpg",
+    "images": [
+      {
+        "path": "images/products/cartera-mini.jpg",
+        "alt": "Cartera Mini",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 336,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 337,
+        "name": "Beige",
+        "options": {
+          "color": "Beige"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 338,
+        "name": "Camel",
+        "options": {
+          "color": "Camel"
+        },
+        "price": null,
+        "stock": 9
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 47,
+    "name": "Cartera Estructurada",
+    "slug": "cartera-estructurada",
+    "category_slug": "carteras",
+    "short_description": "Cartera estructurada, ideal para tu día a día.",
+    "description": "Diseño compacto y elegante, ideal para el día a día. Interior con compartimentos.",
+    "price": 21500,
+    "compare_price": null,
+    "sku": "CAR-005",
+    "stock": 19,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cartera-estructurada.jpg",
+    "images": [
+      {
+        "path": "images/products/cartera-estructurada.jpg",
+        "alt": "Cartera Estructurada",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 339,
+        "name": "Azul",
+        "options": {
+          "color": "Azul"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 340,
+        "name": "Bordó",
+        "options": {
+          "color": "Bordó"
+        },
+        "price": null,
+        "stock": 1
+      },
+      {
+        "id": 341,
+        "name": "Camel",
+        "options": {
+          "color": "Camel"
+        },
+        "price": null,
+        "stock": 9
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-05T10:00:00Z"
+  },
+  {
+    "id": 48,
+    "name": "Cinturón De Cuero Clásico",
+    "slug": "cinturon-de-cuero-clasico",
+    "category_slug": "cinturones",
+    "short_description": "Cinturón de cuero clásico, ideal para tu día a día.",
+    "description": "Cuero genuino con hebilla resistente. Combina con looks formales e informales.",
+    "price": 10500,
+    "compare_price": null,
+    "sku": "CIN-002",
+    "stock": 54,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cinturon-de-cuero-clasico.jpg",
+    "images": [
+      {
+        "path": "images/products/cinturon-de-cuero-clasico.jpg",
+        "alt": "Cinturón De Cuero Clásico",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 342,
+        "name": "Camel - S",
+        "options": {
+          "color": "Camel",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 343,
+        "name": "Camel - M",
+        "options": {
+          "color": "Camel",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 344,
+        "name": "Camel - L",
+        "options": {
+          "color": "Camel",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 345,
+        "name": "Negro - S",
+        "options": {
+          "color": "Negro",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 346,
+        "name": "Negro - M",
+        "options": {
+          "color": "Negro",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 3
+      },
+      {
+        "id": 347,
+        "name": "Negro - L",
+        "options": {
+          "color": "Negro",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-20T10:00:00Z"
+  },
+  {
+    "id": 49,
+    "name": "Cinturón Reversible",
+    "slug": "cinturon-reversible",
+    "category_slug": "cinturones",
+    "short_description": "Cinturón reversible, ideal para tu día a día.",
+    "description": "Cuero genuino con hebilla resistente. Combina con looks formales e informales.",
+    "price": 12000,
+    "compare_price": 14000,
+    "sku": "CIN-003",
+    "stock": 67,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cinturon-reversible.jpg",
+    "images": [
+      {
+        "path": "images/products/cinturon-reversible.jpg",
+        "alt": "Cinturón Reversible",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 348,
+        "name": "Azul - S",
+        "options": {
+          "color": "Azul",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 349,
+        "name": "Azul - M",
+        "options": {
+          "color": "Azul",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 350,
+        "name": "Azul - L",
+        "options": {
+          "color": "Azul",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      },
+      {
+        "id": 351,
+        "name": "Verde - S",
+        "options": {
+          "color": "Verde",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 352,
+        "name": "Verde - M",
+        "options": {
+          "color": "Verde",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 353,
+        "name": "Verde - L",
+        "options": {
+          "color": "Verde",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 7
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-01-18T10:00:00Z"
+  },
+  {
+    "id": 50,
+    "name": "Cinturón Trenzado",
+    "slug": "cinturon-trenzado",
+    "category_slug": "cinturones",
+    "short_description": "Cinturón trenzado, ideal para tu día a día.",
+    "description": "Cuero genuino con hebilla resistente. Combina con looks formales e informales.",
+    "price": 8500,
+    "compare_price": null,
+    "sku": "CIN-004",
+    "stock": 61,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/cinturon-trenzado.jpg",
+    "images": [
+      {
+        "path": "images/products/cinturon-trenzado.jpg",
+        "alt": "Cinturón Trenzado",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 354,
+        "name": "Beige - S",
+        "options": {
+          "color": "Beige",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 14
+      },
+      {
+        "id": 355,
+        "name": "Beige - M",
+        "options": {
+          "color": "Beige",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 12
+      },
+      {
+        "id": 356,
+        "name": "Beige - L",
+        "options": {
+          "color": "Beige",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 10
+      },
+      {
+        "id": 357,
+        "name": "Bordó - S",
+        "options": {
+          "color": "Bordó",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 358,
+        "name": "Bordó - M",
+        "options": {
+          "color": "Bordó",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 15
+      },
+      {
+        "id": 359,
+        "name": "Bordó - L",
+        "options": {
+          "color": "Bordó",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 10
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 51,
+    "name": "Cinturón Con Hebilla Metálica",
+    "slug": "cinturon-con-hebilla-metalica",
+    "category_slug": "cinturones",
+    "short_description": "Cinturón con hebilla metálica, ideal para tu día a día.",
+    "description": "Cuero genuino con hebilla resistente. Combina con looks formales e informales.",
+    "price": 9000,
+    "compare_price": null,
+    "sku": "CIN-005",
+    "stock": 36,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/cinturon-con-hebilla-metalica.jpg",
+    "images": [
+      {
+        "path": "images/products/cinturon-con-hebilla-metalica.jpg",
+        "alt": "Cinturón Con Hebilla Metálica",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 360,
+        "name": "Camel - S",
+        "options": {
+          "color": "Camel",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 8
+      },
+      {
+        "id": 361,
+        "name": "Camel - M",
+        "options": {
+          "color": "Camel",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 362,
+        "name": "Camel - L",
+        "options": {
+          "color": "Camel",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 363,
+        "name": "Gris - S",
+        "options": {
+          "color": "Gris",
+          "talle": "S"
+        },
+        "price": null,
+        "stock": 2
+      },
+      {
+        "id": 364,
+        "name": "Gris - M",
+        "options": {
+          "color": "Gris",
+          "talle": "M"
+        },
+        "price": null,
+        "stock": 7
+      },
+      {
+        "id": 365,
+        "name": "Gris - L",
+        "options": {
+          "color": "Gris",
+          "talle": "L"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 52,
+    "name": "Gorro De Lana",
+    "slug": "gorro-de-lana",
+    "category_slug": "gorros",
+    "short_description": "Gorro de lana, ideal para tu día a día.",
+    "description": "Tejido cálido y suave, ideal para el invierno. Diseño unisex.",
+    "price": 10500,
+    "compare_price": null,
+    "sku": "GOR-002",
+    "stock": 2,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/gorro-de-lana.jpg",
+    "images": [
+      {
+        "path": "images/products/gorro-de-lana.jpg",
+        "alt": "Gorro De Lana",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 366,
+        "name": "Verde - Único",
+        "options": {
+          "color": "Verde",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 0
+      },
+      {
+        "id": 367,
+        "name": "Beige - Único",
+        "options": {
+          "color": "Beige",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 2
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-03-12T10:00:00Z"
+  },
+  {
+    "id": 53,
+    "name": "Gorro Piluso",
+    "slug": "gorro-piluso",
+    "category_slug": "gorros",
+    "short_description": "Gorro piluso, ideal para tu día a día.",
+    "description": "Tejido cálido y suave, ideal para el invierno. Diseño unisex.",
+    "price": 10500,
+    "compare_price": 13500,
+    "sku": "GOR-003",
+    "stock": 24,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/gorro-piluso.jpg",
+    "images": [
+      {
+        "path": "images/products/gorro-piluso.jpg",
+        "alt": "Gorro Piluso",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 368,
+        "name": "Camel - Único",
+        "options": {
+          "color": "Camel",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 11
+      },
+      {
+        "id": 369,
+        "name": "Beige - Único",
+        "options": {
+          "color": "Beige",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 13
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-04-01T10:00:00Z"
+  },
+  {
+    "id": 54,
+    "name": "Gorro Trapper",
+    "slug": "gorro-trapper",
+    "category_slug": "gorros",
+    "short_description": "Gorro trapper, ideal para tu día a día.",
+    "description": "Tejido cálido y suave, ideal para el invierno. Diseño unisex.",
+    "price": 7500,
+    "compare_price": null,
+    "sku": "GOR-004",
+    "stock": 17,
+    "is_featured": true,
+    "is_active": true,
+    "main_image": "images/products/gorro-trapper.jpg",
+    "images": [
+      {
+        "path": "images/products/gorro-trapper.jpg",
+        "alt": "Gorro Trapper",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 370,
+        "name": "Verde - Único",
+        "options": {
+          "color": "Verde",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 9
+      },
+      {
+        "id": 371,
+        "name": "Gris - Único",
+        "options": {
+          "color": "Gris",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 8
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-02-14T10:00:00Z"
+  },
+  {
+    "id": 55,
+    "name": "Gorro Beanie Acanalado",
+    "slug": "gorro-beanie-acanalado",
+    "category_slug": "gorros",
+    "short_description": "Gorro beanie acanalado, ideal para tu día a día.",
+    "description": "Tejido cálido y suave, ideal para el invierno. Diseño unisex.",
+    "price": 7500,
+    "compare_price": 9500,
+    "sku": "GOR-005",
+    "stock": 21,
+    "is_featured": false,
+    "is_active": true,
+    "main_image": "images/products/gorro-beanie-acanalado.jpg",
+    "images": [
+      {
+        "path": "images/products/gorro-beanie-acanalado.jpg",
+        "alt": "Gorro Beanie Acanalado",
+        "is_main": true
+      }
+    ],
+    "variants": [
+      {
+        "id": 372,
+        "name": "Gris - Único",
+        "options": {
+          "color": "Gris",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 6
+      },
+      {
+        "id": 373,
+        "name": "Blanco - Único",
+        "options": {
+          "color": "Blanco",
+          "talle": "Único"
+        },
+        "price": null,
+        "stock": 15
+      }
+    ],
+    "reviews": [],
+    "created_at": "2026-04-01T10:00:00Z"
   }
 ]

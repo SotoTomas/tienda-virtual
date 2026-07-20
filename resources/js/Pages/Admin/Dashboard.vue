@@ -1,21 +1,34 @@
 <script setup>
 import AdminLayout from '@/Layouts/AdminLayout.vue'
-import { Link } from '@inertiajs/vue3'
+import { RouterLink } from 'vue-router'
 
 defineOptions({ layout: AdminLayout })
 
-defineProps({
-    stats:        Object,
-    recentOrders: Array,
+const props = defineProps({
+    stats: {
+        type: Object,
+        default: () => ({
+            total_orders: 0,
+            pending_orders: 0,
+            total_revenue: 0,
+            total_products: 0,
+            low_stock: 0,
+            total_users: 0,
+        })
+    },
+    recentOrders: {
+        type: Array,
+        default: () => []
+    }
 })
 
 const statusLabel = {
-    pending:    { label: 'Pendiente',  class: 'bg-yellow-100 text-yellow-700' },
-    confirmed:  { label: 'Confirmado', class: 'bg-blue-100 text-blue-700' },
+    pending: { label: 'Pendiente', class: 'bg-yellow-100 text-yellow-700' },
+    confirmed: { label: 'Confirmado', class: 'bg-blue-100 text-blue-700' },
     processing: { label: 'Preparando', class: 'bg-purple-100 text-purple-700' },
-    shipped:    { label: 'Enviado',    class: 'bg-indigo-100 text-indigo-700' },
-    delivered:  { label: 'Entregado',  class: 'bg-green-100 text-green-700' },
-    cancelled:  { label: 'Cancelado',  class: 'bg-red-100 text-red-700' },
+    shipped: { label: 'Enviado', class: 'bg-indigo-100 text-indigo-700' },
+    delivered: { label: 'Entregado', class: 'bg-green-100 text-green-700' },
+    cancelled: { label: 'Cancelado', class: 'bg-red-100 text-red-700' },
 }
 </script>
 
@@ -29,12 +42,12 @@ const statusLabel = {
         <!-- Stats -->
         <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-10">
             <div v-for="stat in [
-                { label: 'Pedidos totales',   value: stats.total_orders,   icon: '📦' },
-                { label: 'Pendientes',         value: stats.pending_orders, icon: '⏳', alert: stats.pending_orders > 0 },
-                { label: 'Ingresos',           value: '$' + Number(stats.total_revenue).toLocaleString('es-AR'), icon: '💰' },
-                { label: 'Productos activos',  value: stats.total_products, icon: '🛍️' },
-                { label: 'Stock bajo',         value: stats.low_stock,      icon: '⚠️', alert: stats.low_stock > 0 },
-                { label: 'Usuarios',           value: stats.total_users,    icon: '👥' },
+                 { label: 'Pedidos totales', value: props.stats.total_orders, icon: '📦' },
+        { label: 'Pendientes', value: props.stats.pending_orders, icon: '⏳', alert: props.stats.pending_orders > 0 },
+        { label: 'Ingresos', value: '$' + Number(props.stats.total_revenue).toLocaleString('es-AR'), icon: '💰' },
+        { label: 'Productos activos', value: props.stats.total_products, icon: '🛍️' },
+        { label: 'Stock bajo', value: props.stats.low_stock, icon: '⚠️', alert: props.stats.low_stock > 0 },
+        { label: 'Usuarios', value: props.stats.total_users, icon: '👥' },
             ]" :key="stat.label"
                 class="bg-white border p-5 rounded"
                 :class="stat.alert ? 'border-orange-200' : 'border-stone-100'">
@@ -48,9 +61,12 @@ const statusLabel = {
         <div class="bg-white border border-stone-100 rounded">
             <div class="px-6 py-4 border-b border-stone-100 flex items-center justify-between">
                 <h2 class="font-medium text-stone-800">Pedidos recientes</h2>
-                <Link :href="route('admin.orders.index')" class="text-xs text-stone-400 hover:text-stone-700 transition-colors">
+                <RouterLink
+                    to="/admin/orders"
+                    class="text-xs text-stone-400 hover:text-stone-700 transition-colors"
+                >
                     Ver todos →
-                </Link>
+                </RouterLink>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full">
@@ -65,7 +81,7 @@ const statusLabel = {
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-stone-50">
-                        <tr v-for="order in recentOrders" :key="order.id"
+                        <tr v-for="order in props.recentOrders">
                             class="hover:bg-stone-50 transition-colors">
                             <td class="px-6 py-4 text-sm font-medium text-stone-800">#{{ order.order_number }}</td>
                             <td class="px-6 py-4 text-sm text-stone-600">{{ order.customer }}</td>
@@ -78,8 +94,10 @@ const statusLabel = {
                             </td>
                             <td class="px-6 py-4 text-xs text-stone-400">{{ order.created_at }}</td>
                             <td class="px-6 py-4">
-                                <Link :href="route('admin.orders.show', order.id)"
-                                    class="text-xs text-stone-400 hover:text-stone-700">
+                                <Link
+                                    :href="route('admin.orders.show', order.id)"
+                                    class="text-xs text-stone-400 hover:text-stone-700"
+                                >
                                     Ver →
                                 </Link>
                             </td>

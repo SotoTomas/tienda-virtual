@@ -84,10 +84,11 @@ export const useCatalogStore = defineStore('catalog', {
             if (this.loaded) return
 
             if (!catalogPromise) {
+                const base = import.meta.env.BASE_URL
                 catalogPromise = Promise.all([
-                    fetch('/data/categories.json').then((r) => r.json()),
-                    fetch('/data/products.json').then((r) => r.json()),
-                    fetch('/data/coupons.json').then((r) => r.json()),
+                    fetch(`${base}data/categories.json`).then((r) => r.json()),
+                    fetch(`${base}data/products.json`).then((r) => r.json()),
+                    fetch(`${base}data/coupons.json`).then((r) => r.json()),
                 ])
             }
 

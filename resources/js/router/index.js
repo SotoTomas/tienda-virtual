@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import StoreLayout from '@/Layouts/StoreLayout.vue'
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     scrollBehavior() {
         return { top: 0 }
     },
@@ -40,6 +40,16 @@ const router = createRouter({
                     path: 'carrito',
                     name: 'cart.index',
                     component: () => import('@/Pages/Cart/Index.vue'),
+                },
+                {
+                    path: 'carrito',
+                    name: 'cart.index',
+                    component: () => import('@/Pages/Cart/Index.vue'),
+                },
+                {
+                    path: 'admin',
+                    name: 'admin.index',
+                    component: () => import('@/Pages/Admin/Dashboard.vue'),
                 },
             ],
         },
